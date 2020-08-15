@@ -1,0 +1,33 @@
+# Mac-specific install config
+
+# Homebrew casks and formulas (enabled with dotbot-brew plugin)
+
+- brew:
+  - autojump
+  - heroku
+  - hub
+  - postgresql
+  - python@3.8
+  - rbenv
+  - redis
+  - ruby
+  - ruby-build
+  - sqlite
+  - vim
+  - yarn
+
+- cask:
+  # Apps
+  - keycastr
+  - caffeine
+  - postico
+
+  # Tools
+  - chromedriver
+
+  # Quick look plugins
+  - qlcolorcode
+  - qlmarkdown
+  - qlstephen
+  - quicklook-csv
+  - quicklook-json
