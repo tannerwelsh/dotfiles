@@ -1,0 +1,8 @@
+install:  --no-rdoc --no-ri
+update: --no-rdoc --no-ri
+
+:aliases:
+  ls: list
+  lsd: list -d
+  rsearch: search --remote
+
