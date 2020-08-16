@@ -83,7 +83,9 @@ done
 ##
 
 alias be="bundle exec"
-
+alias beg="bundle exec guard"
+alias ber="bundle exec rails"
+alias bers="bundle exec rspec"
 
 ##
 ## Node.js, NPM & Yarn

@@ -71,7 +71,7 @@ ZSH_THEME="tannerwelsh"
 plugins=(
     autojump
     osx
-#     git
+    globalias # Expands all glob expressions, subcommands and aliases (including global).
     ruby
     rbenv # required for prompt to work
     node
