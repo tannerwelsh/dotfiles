@@ -52,15 +52,13 @@ alias catn="cat -n"
 ## Git & GitHub
 ##
 
-# Git commands
 alias g="git"
-alias gst="git status"
-alias gc="git commit --verbose"
-alias gco="git checkout"
-alias ga="git add"
-alias gr="git reset"
-alias gl="git l"
-alias gd="git diff"
+
+# Define git aliases in gitconfig, just add short versions
+# here. E.g. `git c` (for commit) is aliased to `gc`
+for gitalias in $(git config --get-regexp ^alias\. | sed -e 's/^alias\.\([^ ]*\) .*$/\1/'); do
+  alias "g$gitalias"="git $gitalias"
+done
 
 # Alias hub to git
 eval "$(hub alias -s)"
