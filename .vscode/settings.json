@@ -1,6 +1,7 @@
 {
   "files.exclude": {
     "dotbot": true,
-    "dotbot-brew": true
+    "dotbot-brew": true,
+    "ohmyzsh"
   }
 }
