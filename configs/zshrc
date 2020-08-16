@@ -1,0 +1,10 @@
+#
+# ENV SETTINGS
+# ------------
+source ~/.env
+
+#
+# OH-MY-ZSH CONFIG
+# -------------
+source "$DOTFILES_DIR/configs/zsh_ohmyzsh_config"
+

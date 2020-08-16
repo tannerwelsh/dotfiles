@@ -1,6 +1,7 @@
 - clean: ['~']
 
 - link:
+    ~/.env: configs/env
     ~/.gemrc: configs/gemrc
     ~/.gitconfig: configs/gitconfig
     ~/.gitignore: configs/gitignore
@@ -8,3 +9,4 @@
     ~/.rspec: configs/rspec
     ~/.sqliterc: configs/sqliterc
     ~/.vuerc: configs/vuerc
+    ~/.zshrc: configs/zshrc
