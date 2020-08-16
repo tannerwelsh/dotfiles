@@ -9,13 +9,15 @@ The main configuration lives in `default.conf.yaml`, and additional machine-spec
 ## Installation
 
 1. Clone this repo at `~/.dotfiles` - this ensures that the `DOTFILES_DIR` environment variable is exported correctly.
-
+    ```shell
     $ git clone git@github.com:tannerwelsh/dotfiles.git
+    ```
 
 2. Run install script for the given machine, e.g. to use `mac.conf.yaml`:
-
+    ```shell
     $ cd habitat
     $ ./install mac
+    ```
 
 3. Enjoy your new configuration, with dotfiles symlinked into `~/`!
 
