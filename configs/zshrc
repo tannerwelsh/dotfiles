@@ -1,10 +1,24 @@
-#
-# ENV SETTINGS
-# ------------
+##
+## ENV SETTINGS
+##
 source ~/.env
 
-#
-# OH-MY-ZSH CONFIG
-# -------------
+
+##
+## GENERAL ZSH CONFIG
+## Must come before other settings
+##
+source "$DOTFILES_DIR/configs/zsh_config"
+
+
+##
+## OH-MY-ZSH CONFIG
+##
 source "$DOTFILES_DIR/configs/zsh_ohmyzsh_config"
+
+
+##
+## CUSTOM ZSH ALIASES
+##
+source "$DOTFILES_DIR/configs/zsh_aliases"
 

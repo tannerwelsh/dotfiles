@@ -1,0 +1,60 @@
+#!/usr/bin/env zsh
+
+##
+## General
+##
+
+# Don't store commands starting with a space in history
+setopt HIST_IGNORE_SPACE
+
+# Prefer US English and use UTF-8
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="${yellow}";
+
+
+##
+## Completion
+##
+
+# Homebrew Shell Completion https://docs.brew.sh/Shell-Completion
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+
+##
+## Path Management
+##
+
+# Add .dotfiles/bin scripts to path
+export PATH=$DOTFILES_DIR/bin:$PATH
+
+
+##
+## Editor Settings
+##
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='mvim'
+else
+  export EDITOR='vim'
+fi
+
+
+##
+## Language / Tooling Setup
+##
+
+# NVM / Node.js
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Ruby / rbenv
+eval "$(rbenv init -)"
