@@ -5,7 +5,10 @@ export ZSH="$DOTFILES_DIR/ohmyzsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="avit"
+# ZSH_THEME="avit"
+
+# Use custom theme/prompt (from ohmyzsh/custom/themes)
+ZSH_THEME="tannerwelsh"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -69,8 +72,10 @@ plugins=(
     autojump
     osx
 #     git
-#     ruby
-#     rvm
+    ruby
+    rbenv # required for prompt to work
+    node
+    nvm # requried for prompt to work
 )
 
 source $ZSH/oh-my-zsh.sh
