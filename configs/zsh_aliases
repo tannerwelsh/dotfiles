@@ -7,6 +7,9 @@ alias _alias="$EDITOR $0:A" # $0:A is ref to current script in ZSH
 ## General
 ##
 
+# Go to ./dotfiles
+alias dotfiles="cd $DOTFILES_DIR"
+
 # Allow aliases to be with sudo
 alias sudo="sudo "
 
