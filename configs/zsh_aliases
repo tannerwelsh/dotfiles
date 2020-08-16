@@ -59,7 +59,7 @@ alias gc="git commit --verbose"
 alias gco="git checkout"
 alias ga="git add"
 alias gr="git reset"
-alias gl="git log"
+alias gl="git l"
 alias gd="git diff"
 
 # Alias hub to git
