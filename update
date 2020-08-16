@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+# Update DotBot submodule
+git submodule update --remote dotbot
+
+# Update DotBot-Brew plugin
+git submodule update --remote dotbot-brew
+
+# Update Oh My ZSH
+git submodule update --remote ohmyzsh
