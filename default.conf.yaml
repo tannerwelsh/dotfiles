@@ -8,5 +8,6 @@
     ~/.railsrc: configs/railsrc
     ~/.rspec: configs/rspec
     ~/.sqliterc: configs/sqliterc
+    ~/.ssh/config: configs/ssh
     ~/.vuerc: configs/vuerc
     ~/.zshrc: configs/zshrc
