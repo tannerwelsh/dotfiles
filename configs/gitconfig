@@ -22,6 +22,7 @@
 	ff = merge --ff-only
 	l = log --oneline --graph
 	noff = merge --no-ff
+	pu = push
 	pom = push origin master
 	pullff = pull --ff-only
 	ri = rebase --interactive --autosquash
