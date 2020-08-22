@@ -1,0 +1,7 @@
+# Linux-specific install config
+
+# Homebrew formulas
+
+- brew:
+  - hub
+  - rbenv  

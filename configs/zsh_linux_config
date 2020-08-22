@@ -1,0 +1,4 @@
+# Linux-specific ZSH configs
+
+# Set up Homebrew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)

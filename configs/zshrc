@@ -10,6 +10,16 @@ source ~/.env
 ##
 source "$DOTFILES_DIR/configs/zsh_config"
 
+##
+## OS-SPECIFIC CONFIGS
+##
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  # For Pop!_OS / Ubuntu
+  source "$DOTFILES_DIR/configs/zsh_linux_config"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  # For macOS
+fi
+
 
 ##
 ## OH-MY-ZSH CONFIG
