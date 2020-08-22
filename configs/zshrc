@@ -22,3 +22,10 @@ source "$DOTFILES_DIR/configs/zsh_ohmyzsh_config"
 ##
 source "$DOTFILES_DIR/configs/zsh_aliases"
 
+
+##
+## LANGUAGE / ENV SETUP SCRIPTS
+##
+
+# Ruby / rbenv
+eval "$(rbenv init -)"
