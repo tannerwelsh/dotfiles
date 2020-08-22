@@ -1,5 +1,10 @@
 # Linux-specific install config
 
+- link:
+    ~/.xmodmap_original: configs/xmodmap_original
+    ~/.xmodmap: configs/xmodmap
+    ~/.xinitrc: configs/xinitrc
+
 # Homebrew formulas
 
 - brew:
