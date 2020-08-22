@@ -13,13 +13,17 @@ The main configuration lives in `default.conf.yaml`, and additional machine-spec
     $ git clone git@github.com:tannerwelsh/dotfiles.git
     ```
 
-2. Run install script for the given machine, e.g. to use `mac.conf.yaml`:
+2. Install dependencies: submodules like ohmyzsh, and dependent packages/systems:
+  - ZSH
+  - [Homebrew](https://brew.sh/) \*and for [Linux](https://docs.brew.sh/Homebrew-on-Linux)
+
+3. Run install script for the given machine, e.g. to use `mac.conf.yaml`:
     ```shell
     $ cd habitat
     $ ./install mac
     ```
 
-3. Enjoy your new configuration, with dotfiles symlinked into `~/`!
+4. Enjoy your new configuration, with dotfiles symlinked into `~/`!
 
 ## Updating Dependencies
 
