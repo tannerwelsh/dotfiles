@@ -3,10 +3,10 @@
 - link:
     ~/.xmodmap_original: configs/xmodmap_original
     ~/.xmodmap: configs/xmodmap
-    ~/.xinitrc: configs/xinitrc
+    ~/.xkbmap: configs/xkbmap
 
 # Homebrew formulas
 
 - brew:
   - hub
-  - rbenv  
+  - rbenv
