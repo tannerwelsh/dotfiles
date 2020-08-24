@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+
+function list_dbs_linux {
+  echo "PostgreSQL clusters:"
+  pg_lsclusters
+}
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  # For Pop!_OS / Ubuntu
+  list_dbs_linux
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  # For macOS - databases managed by brew services
+  brew services list
+fi
