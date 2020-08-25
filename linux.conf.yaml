@@ -8,5 +8,6 @@
 # Homebrew formulas
 
 - brew:
+  - fzf
   - hub
   - rbenv
