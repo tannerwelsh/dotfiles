@@ -42,3 +42,6 @@ eval "$(rbenv init -)"
 
 # FZF: command line fuzzy finder https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Direnv https://direnv.net
+eval "$(direnv hook zsh)"
