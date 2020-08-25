@@ -7,6 +7,7 @@
 [alias]
 	a = add
 	aa = add --all
+	ap = add -p
 	amend = commit --amend
 	b = branch
 	c = commit --verbose
@@ -22,10 +23,11 @@
 	ff = merge --ff-only
 	l = log --oneline --graph
 	noff = merge --no-ff
-	pu = push
+	p = push
 	pom = push origin master
 	pullff = pull --ff-only
 	ri = rebase --interactive --autosquash
+	rc = rebase --continue
 	st = status
 	up = pull
 
