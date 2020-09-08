@@ -8,6 +8,7 @@
     ~/.railsrc: configs/railsrc
     ~/.rspec: configs/rspec
     ~/.sqliterc: configs/sqliterc
+    ~/.tmux.conf: configs/tmux.conf
     ~/.vimrc: configs/vimrc
     ~/.vuerc: configs/vuerc
     ~/.zshrc: configs/zshrc
