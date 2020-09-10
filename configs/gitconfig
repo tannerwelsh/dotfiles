@@ -5,6 +5,7 @@
 [credential]
 	helper = osxkeychain
 [alias]
+	lsalias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	a = add
 	aa = add --all
 	ap = add -p
