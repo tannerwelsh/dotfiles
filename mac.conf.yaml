@@ -6,6 +6,8 @@
 
 - brew:
   - autojump
+  - bat
+  - fd
   - fzf
   - heroku
   - hub
