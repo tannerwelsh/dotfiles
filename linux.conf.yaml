@@ -6,3 +6,8 @@
   - fzf
   - hub
   - rbenv
+
+# Shell commands & apt installs
+- shell:
+  - [sudo apt install fd-find, Install fd tool]
+  - echo 'Install bat tool manually. https://github.com/sharkdp/bat'
