@@ -1,5 +1,9 @@
 # Linux-specific install config
 
+- link:
+    ~/.fzf.bash: configs/fzf.bash
+    ~/.fzf.zsh: configs/fzf.zsh
+
 # Homebrew formulas
 
 - brew:
