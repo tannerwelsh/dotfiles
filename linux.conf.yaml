@@ -3,6 +3,7 @@
 - link:
     ~/.fzf.bash: configs/fzf.bash
     ~/.fzf.zsh: configs/fzf.zsh
+    ~/.xbindkeysrc: configs/xbindkeysrc
 
 # Homebrew formulas
 
@@ -15,3 +16,6 @@
 - shell:
   - [sudo apt install fd-find, Install fd tool]
   - echo 'Install bat tool manually. https://github.com/sharkdp/bat'
+  - [sudo apt install xbindkeys, Install xbindkeys for remapping key input]
+  - [sudo apt install xautomation, Install xautomation to control X from command line]
+  - [sudo apt install neofetch, Install neofetch (display system info)]
