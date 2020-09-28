@@ -38,7 +38,7 @@ source "$DOTFILES_DIR/configs/zsh_aliases"
 ##
 
 # Ruby / rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)" - not needed b/c provided by ohmyzsh rbenv plugin
 
 # FZF: command line fuzzy finder https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
