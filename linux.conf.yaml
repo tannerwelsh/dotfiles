@@ -14,8 +14,32 @@
 
 # Shell commands & apt installs
 - shell:
-  - [sudo apt install fd-find, Install fd tool]
-  - echo 'Install bat tool manually. https://github.com/sharkdp/bat'
-  - [sudo apt install xbindkeys, Install xbindkeys for remapping key input]
-  - [sudo apt install xautomation, Install xautomation to control X from command line]
-  - [sudo apt install neofetch, Install neofetch (display system info)]
+  -
+    command: "command -v bat"
+    description: Install bat manually (augmented cat command)
+    stderr: true
+    stdout: true
+  -
+    command: sudo apt install fd-find
+    description: Install fdfind tool for finding files
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: sudo apt install xbindkeys
+    description: Install xbindkeys for remapping key input
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: sudo apt install xautomation
+    description: Install xautomation to control X from command line
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: sudo apt install neofetch
+    description: Install neofetch (display system info)
+    stdin: true
+    stdout: true
+    stderr: true
