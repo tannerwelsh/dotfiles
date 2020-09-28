@@ -65,6 +65,22 @@
 #"rxvt"
 #  Control + b:2 + Release
 
+# --- CUSTOM CONTROLS ---
+
+## Logitech MX Master Mouse Buttons
+# Set side front button (button 9) to Return key
+"xte 'key Return'"
+  b:9
+# Set side back button (button 8) to Backspace key
+"xte 'key BackSpace'"
+  b:8
+# Set side scroll up (button 6) to move to right tab (when control is pressed)
+"xte 'keydown Control_L' 'key Page_Down' 'keyup Control_L'"
+  control + b:6
+# Set side scroll down (button 7) to move to left tab (when control is pressed)
+"xte 'keydown Control_L' 'key Page_Up' 'keyup Control_L'"
+  control + b:7
+
 ##################################
 # End of xbindkeys configuration #
 ##################################
