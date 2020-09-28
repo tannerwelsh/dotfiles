@@ -45,6 +45,12 @@ $ _alias            # => open zsh_aliases file in $EDITOR
 $ refresh           # => re-source ~/.zshrc in shell (to include latest changes)
 ```
 
+## Additional Tools
+
+There are other tools which you may want to install depending on environment needs.
+
+- [ImageMagick](https://imagemagick.org/) - image processing tool, used by lots of libraries
+
 ## Resources
 
 - [dotbot: A tool that bootstraps your dotfiles](https://github.com/anishathalye/dotbot/)
