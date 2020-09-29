@@ -53,6 +53,11 @@ if &term =~ '^screen'
 endif
 set nofoldenable " disable folding by default
 
+"----------------------
+" Find, search, replace
+"----------------------
+set wrapscan " wrap search to beginning of file
+
 "--------------------
 " Misc configurations
 "--------------------
