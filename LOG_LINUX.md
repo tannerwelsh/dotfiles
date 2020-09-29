@@ -15,6 +15,8 @@ Install and use `GNOME Tweaks` app (available via Pop! Shop) to make some genera
 
 For Logitech keyboard/mouse, can use `xbindkeys` and `xautomation` package to re-map key/mouse button presses to system commands. More info: https://support.system76.com/articles/custom-mouse-buttons/
 
+Re-mapping keys can be done with `setxkbmap` or `xmodmap` (which is the old way). `xmodmap` is useful for one-off changes. More info: https://utcc.utoronto.ca/~cks/space/blog/unix/XKeyboardRemappingNotes
+
 ## Running Programs on Start (Autostarting)
 
 There are various points in the boot process to hook into for starting a particular program.

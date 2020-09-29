@@ -4,6 +4,7 @@
     ~/.fzf.bash: configs/fzf.bash
     ~/.fzf.zsh: configs/fzf.zsh
     ~/.xbindkeysrc: configs/xbindkeysrc
+    ~/.xmodmap: configs/xmodmap
 
 # Homebrew formulas
 

@@ -1,0 +1,11 @@
+! Use left control as Mode_switch
+keycode  37 = Mode_switch Meta_L Mode_switch Meta_L
+
+! Use right opt/control key as control (not alt)
+keycode 108 = Control_R NoSymbol Control_R NoSymbol
+
+! Use hjkl as arrow keys when Mode_switch enabled
+keycode  43 = h H Left
+keycode  44 = j J Down
+keycode  45 = k K Up
+keycode  46 = l L Right
