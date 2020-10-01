@@ -45,6 +45,30 @@ $ _alias            # => open zsh_aliases file in $EDITOR
 $ refresh           # => re-source ~/.zshrc in shell (to include latest changes)
 ```
 
+## Submodules
+
+This tool takes advantage of [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to load other dependencies. The full list of submodules can be found in the file `.gitmodules`.
+
+### dotbot
+
+The foundational framework for this project. Provides basic infrastructure for defining the configuration YAML.
+[repo](https://github.com/anishathalye/dotbot/)
+
+### dotbot-brew
+
+Dotbot plugin allowing list of Homebrew packages to be defined in config files.
+[repo](https://github.com/d12frosted/dotbot-brew)
+
+### ohmyzsh
+
+Framework for managing zsh configuration.
+[repo](https://github.com/ohmyzsh/ohmyzsh)
+
+### tpm
+
+Tmux plugin manager. Self-explanatory.
+[repo](https://github.com/tmux-plugins/tpm)
+
 ## Additional Tools
 
 There are other tools which you may want to install depending on environment needs.
