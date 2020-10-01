@@ -1,9 +1,9 @@
 # Mac-specific install config
 
-# Homebrew casks and formulas (enabled with dotbot-brew plugin)
 - link:
   ~/.ssh/config: configs/ssh
 
+# Homebrew casks and formulas (enabled with dotbot-brew plugin)
 - brew:
   - autojump
   - bat
