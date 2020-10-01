@@ -1,7 +1,7 @@
 - clean: ['~']
 
 - create:
-    ~/.tmux/plugins
+    - ~/.tmux/plugins
 
 - link:
     ~/.env: configs/env
@@ -12,9 +12,7 @@
     ~/.rspec: configs/rspec
     ~/.sqliterc: configs/sqliterc
     ~/.tmux.conf: configs/tmux.conf
-    ~/.tmux/plugins/tpm:
-      create: true
-      path: tpm
+    ~/.tmux/plugins/tpm: tpm
     ~/.vimrc: configs/vimrc
     ~/.vuerc: configs/vuerc
     ~/.zshrc: configs/zshrc
