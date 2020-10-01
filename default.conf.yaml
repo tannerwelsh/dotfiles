@@ -1,5 +1,8 @@
 - clean: ['~']
 
+- create:
+    ~/.tmux/plugins
+
 - link:
     ~/.env: configs/env
     ~/.gemrc: configs/gemrc
@@ -9,8 +12,12 @@
     ~/.rspec: configs/rspec
     ~/.sqliterc: configs/sqliterc
     ~/.tmux.conf: configs/tmux.conf
+    ~/.tmux/plugins/tpm:
+      create: true
+      path: tpm
     ~/.vimrc: configs/vimrc
     ~/.vuerc: configs/vuerc
     ~/.zshrc: configs/zshrc
     ~/.oh-my-zsh: ohmyzsh
     ~/.oh-my-zsh/custom/themes/tannerwelsh.zsh-theme: themes/tannerwelsh.zsh-theme
+
