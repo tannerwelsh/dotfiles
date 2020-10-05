@@ -1,4 +1,4 @@
 #!/usr/bin/env zsh
 
 # Update all submodules
-git submodule update --remote
+git submodule update --init --remote
