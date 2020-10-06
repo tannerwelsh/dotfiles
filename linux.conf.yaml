@@ -11,6 +11,7 @@
 - brew:
   - fzf
   - hub
+  - python3
   - rbenv
 
 # Shell commands & apt installs
