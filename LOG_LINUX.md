@@ -27,3 +27,8 @@ For starting applications when the desktop environment (GNOME for Pop! OS) loads
 
 See  https://wiki.archlinux.org/index.php/Autostarting for more info.
 
+## Non-standard Installs
+
+### Docker
+
+Followed instructions in https://docs.docker.com/engine/install/ubuntu/
