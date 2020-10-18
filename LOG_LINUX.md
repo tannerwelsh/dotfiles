@@ -32,3 +32,7 @@ See  https://wiki.archlinux.org/index.php/Autostarting for more info.
 ### Docker
 
 Followed instructions in https://docs.docker.com/engine/install/ubuntu/
+
+### Go Language
+
+https://golang.org/doc/install

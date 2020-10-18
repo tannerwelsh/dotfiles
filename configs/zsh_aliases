@@ -28,6 +28,9 @@ alias map="xargs -n1"
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 
+# Show system info using gotop
+alias sysinfo="gotop"
+
 
 ##
 ## File System
@@ -46,6 +49,15 @@ alias lat="ls -AGFoth"
 
 # Concatenate and print content of files (add line numbers)
 alias catn="cat -n"
+
+# Aliases for logo-ls (filetype-appropriate logos)
+alias lls='logo-ls'
+alias lla='logo-ls -A'
+alias lll='logo-ls -al'
+# equivalents with Git Status on by Default
+alias llsg='logo-ls -D'
+alias llag='logo-ls -AD'
+alias lllg='logo-ls -alD'
 
 
 ##
