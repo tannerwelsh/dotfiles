@@ -25,6 +25,12 @@ The main configuration lives in `default.conf.yaml`, and additional machine-spec
 
 4. Enjoy your new configuration, with dotfiles symlinked into `~/`!
 
+Some of the packages installed might need additional configuration to work properly. Known caveats:
+
+### FZF
+
+After running `./install`, install useful keybindings and fuzzy completion for fzf. See instructions with `brew info fzf` (for Mac).
+
 ## Updating Dependencies
 
 All dependencies are included as Git submodules. To update them, run:
