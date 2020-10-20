@@ -1,40 +1,40 @@
 # Mac-specific install config
 
 - link:
-  ~/.ssh/config: configs/ssh
+    ~/.ssh/config: configs/ssh
 
 # Homebrew casks and formulas (enabled with dotbot-brew plugin)
 - brew:
-  - autojump
-  - bat
-  - fd
-  - fzf
-  - gotop
-  - heroku
-  - hub
-  - postgresql
-  - python@3.8
-  - rbenv
-  - redis
-  - ruby
-  - ruby-build
-  - sqlite
-  - tmux
-  - vim
-  - yarn
+    - autojump
+    - bat
+    - fd
+    - fzf
+    - gotop
+    - heroku
+    - hub
+    - postgresql
+    - python@3.8
+    - rbenv
+    - redis
+    - ruby
+    - ruby-build
+    - sqlite
+    - tmux
+    - vim
+    - yarn
 
 - cask:
-  # Apps
-  - keycastr
-  - caffeine
-  - postico
+    # Apps
+    - keycastr
+    - caffeine
+    - postico
 
-  # Tools
-  - chromedriver
+    # Tools
+    - chromedriver
 
-  # Quick look plugins
-  - qlcolorcode
-  - qlmarkdown
-  - qlstephen
-  - quicklook-csv
-  - quicklook-json
+    # Quick look plugins
+    - qlcolorcode
+    - qlmarkdown
+    - qlstephen
+    - quicklook-csv
+    - quicklook-json
