@@ -12,6 +12,7 @@
     - fzf
     - gotop
     - heroku
+    - highlight
     - hub
     - postgresql
     - python@3.8
