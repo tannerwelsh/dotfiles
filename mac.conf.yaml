@@ -36,8 +36,9 @@
     - chromedriver
 
     # Quick look plugins
-    - qlcolorcode
+    - qlcolorcode # syntax highlighting, depends on highlight package
+    - qlimagesize # shows image dimensions
     - qlmarkdown
-    - qlstephen
+    - qlstephen # view various text files
     - quicklook-csv
     - quicklook-json
