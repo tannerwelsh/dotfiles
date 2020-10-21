@@ -2,6 +2,9 @@
 
 - link:
     ~/.ssh/config: configs/ssh
+    ~/.config/karabiner/karabiner.json:
+      create: true
+      path: configs/karabiner.json
 
 # Homebrew casks and formulas (enabled with dotbot-brew plugin)
 - brew:
