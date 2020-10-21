@@ -3,6 +3,5 @@
 # Set up Homebrew
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
-# Add Go bin + GOPATH to path
+# Add Go bin to path
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$(go env GOPATH)/bin
