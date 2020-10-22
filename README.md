@@ -75,11 +75,28 @@ Framework for managing zsh configuration.
 Tmux plugin manager. Self-explanatory.
 [repo](https://github.com/tmux-plugins/tpm)
 
-## Additional Tools
+## Additional Tools & Apps
 
 There are other tools which you may want to install depending on environment needs.
 
 - [ImageMagick](https://imagemagick.org/) - image processing tool, used by lots of libraries
+
+Also, some optional apps that you can manually install:
+
+- 1Password
+- Descript
+- Docker Desktop
+- Dropbox
+- Figma
+- Moom
+- Pastebot (Mac)
+- Pocket
+- Slack
+- Spotify
+- Todoist
+- VS Code (and Insiders edition)
+- XCode (Mac)
+- Zoom
 
 ## Resources
 
