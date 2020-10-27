@@ -13,6 +13,7 @@
   - hub
   - python3
   - rbenv
+  - ripgrep
 
 # Shell commands & apt installs
 - shell:
