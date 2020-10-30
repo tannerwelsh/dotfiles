@@ -14,7 +14,7 @@
 - brew:
   - fzf
   - hub
-  - python3
+  - python@3.9
   - rbenv
   - ripgrep
 
