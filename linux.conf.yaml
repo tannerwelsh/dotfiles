@@ -1,6 +1,9 @@
 # Linux-specific install config
 
 - link:
+    ~/.config/alacritty/alacritty.yml:
+      path: configs/alacritty.yml
+      create: true
     ~/.fzf.bash: configs/fzf.bash
     ~/.fzf.zsh: configs/fzf.zsh
     ~/.xbindkeysrc: configs/xbindkeysrc
