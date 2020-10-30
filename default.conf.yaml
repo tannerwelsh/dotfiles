@@ -13,7 +13,7 @@
     ~/.sqliterc: configs/sqliterc
     ~/.tmux.conf: configs/tmux.conf
     ~/.tmux/plugins/tpm: tpm
-    ~/.vimrc: configs/vimrc
+    ~/.vim: vim
     ~/.vuerc: configs/vuerc
     ~/.zshrc: configs/zshrc
     ~/.oh-my-zsh: ohmyzsh
