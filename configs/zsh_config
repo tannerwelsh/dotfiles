@@ -14,6 +14,9 @@ export LC_ALL="en_US.UTF-8";
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="${yellow}";
 
+# Use 256 colors
+export TERM=xterm-256color
+
 
 ##
 ## Completion

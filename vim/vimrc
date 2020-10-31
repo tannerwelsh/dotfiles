@@ -1,9 +1,19 @@
 set nocompatible " not vi compatible
 
+"-------------
+" Package mgmt
+"-------------
+packadd! dracula
+
 "------------------
 " Syntax and indent
 "------------------
 syntax on " turn on syntax highlighting
+
+if !has('gui_running')
+  set t_Co=256 " use true colors
+endif
+
 set showmatch " show matching braces when text indicator is over them
 
 " highlight current line, but only in active window
@@ -45,6 +55,24 @@ set smartcase
 " open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
+
+"----------------
+" Colors & themes
+"----------------
+colorscheme dracula
+
+" set lightline colorscheme
+" options: https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md
+let g:lightline = { 'colorscheme': 'darcula' }
+
+" enable true colors (24bit)
+" from installation instructions: https://github.com/sonph/onehalf/tree/master/vim
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 
 "---------------------
 " Basic editing config
