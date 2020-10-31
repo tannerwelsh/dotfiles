@@ -16,13 +16,41 @@ augroup END
 filetype plugin indent on " enable file type detection
 set autoindent
 
+"--------------
+" Tabs & spaces
+"--------------
+" use 2 spaces instead of tabs during formatting
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+
+set nojoinspaces " suppress inserting two spaces between sentences
+
+"----------------------
+" Find, search, replace
+"----------------------
+set incsearch " incremental search (as string is being typed)
+set hls " highlight search
+set wrapscan " wrap search to beginning of file
+
+" smart case-sensitive search
+set ignorecase
+set smartcase
+
+"----------------
+" Panes & windows
+"----------------
+
+" open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
 "---------------------
 " Basic editing config
 "---------------------
 set shortmess+=I " disable startup message
 set nu " number lines
-set incsearch " incremental search (as string is being typed)
-set hls " highlight search
 set listchars=tab:>>,nbsp:~ " set list to see tabs and non-breakable spaces
 set lbr " line break
 set scrolloff=5 " show lines above and below cursor (when possible)
@@ -31,40 +59,25 @@ set laststatus=2
 set backspace=indent,eol,start " allow backspacing over everything
 set timeout timeoutlen=1000 ttimeoutlen=100 " fix slow O inserts
 set lazyredraw " skip redrawing screen in some cases
-set autochdir " automatically set current directory to directory of last opened file
 set hidden " allow auto-hiding of edited buffers
 set history=8192 " more history
-set nojoinspaces " suppress inserting two spaces between sentences
-" use 2 spaces instead of tabs during formatting
-set expandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-" smart case-sensitive search
-set ignorecase
-set smartcase
-" tab completion for files/bufferss
-set wildmode=longest,list
-set wildmenu
+set nofoldenable " disable folding by default
 set mouse+=a " enable mouse mode (scrolling, selection, etc)
 if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
 endif
-set nofoldenable " disable folding by default
 
-"----------------------
-" Find, search, replace
-"----------------------
-set wrapscan " wrap search to beginning of file
+"----------------
+" Tab completions
+"----------------
+" tab completion for files/buffers
+set wildmode=longest,list
+set wildmenu
 
-"--------------------
-" Misc configurations
-"--------------------
-
-" open new split panes to right and bottom, which feels more natural
-set splitbelow
-set splitright
+"------------
+" Key mapping
+"------------
 
 " move between panes
 nnoremap <C-j> <C-w>j
