@@ -14,3 +14,9 @@
 [submodule "vim/pack/plugins/start/lightline"]
 	path = vim/pack/plugins/start/lightline
 	url = https://github.com/itchyny/lightline.vim
+[submodule "vim/pack/themes/start/dracula"]
+	path = vim/pack/themes/start/dracula
+	url = https://github.com/dracula/vim.git
+[submodule "vim/pack/tpope/start/commentary"]
+	path = vim/pack/tpope/start/commentary
+	url = https://tpope.io/vim/commentary.git
