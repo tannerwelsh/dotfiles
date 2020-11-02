@@ -1,6 +1,9 @@
 # Mac-specific install config
 
 - link:
+    ~/.config/alacritty/alacritty.yml:
+      path: configs/alacritty-mac.yml
+      create: true
     ~/.ssh/config: configs/ssh
     ~/.config/karabiner/karabiner.json:
       create: true
@@ -31,6 +34,7 @@
 
 - cask:
     # Apps
+    - alacritty
     - keycastr
     - caffeine
     - postico
