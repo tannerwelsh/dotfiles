@@ -46,7 +46,25 @@ if type go &>/dev/null; then
 fi
 
 # FZF: command line fuzzy finder https://github.com/junegunn/fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [[ -f ~/.fzf.zsh ]]; then
+  source ~/.fzf.zsh
+
+  # Setting fd/fdfind as default source for fzf (w/o pipe)
+  if type fd &>/dev/null; then
+    export FZF_DEFAULT_COMMAND='fd --type f'
+  elif type fdfind &>/dev/null; then
+    export FZF_DEFAULT_COMMAND='fdfind --type f'
+  else
+    export FZF_DEFAULT_COMMAND='find . -type f'
+  fi
+
+  # If in git repo, CTRL-T searches git files
+  if hub rev-parse --is-inside-work-tree &>/dev/null; then
+    export FZF_CTRL_T_COMMAND='git ls-files'
+  else
+    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+  fi
+fi
 
 # Direnv https://direnv.net
 eval "$(direnv hook zsh)"
