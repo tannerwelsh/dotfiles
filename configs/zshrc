@@ -59,7 +59,7 @@ if [[ -f ~/.fzf.zsh ]]; then
   fi
 
   # If in git repo, CTRL-T searches git files
-  if hub rev-parse --is-inside-work-tree &>/dev/null; then
+  if git rev-parse --is-inside-work-tree &>/dev/null; then
     export FZF_CTRL_T_COMMAND='git ls-files'
   else
     export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
