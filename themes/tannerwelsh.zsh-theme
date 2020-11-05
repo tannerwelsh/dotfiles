@@ -7,7 +7,7 @@ typeset +H _return_status="%(?.%F{green}√.%{$fg_bold[red]%}⍉)%{$reset_color%
 typeset +H _hist_no="%{$fg[grey]%}%h%{$reset_color%}"
 
 PROMPT='
-$(_user_host)${_current_dir} $(git_prompt_info)
+$(_user_host)${_current_dir} $(git_prompt_info) %(1j.[bg jobs: %j].)
 %{%(!.%F{red}.%F{white})%}▶%{$reset_color%} '
 
 PROMPT2='%{%(!.%F{red}.%F{white})%}◀%{$reset_color%} '
