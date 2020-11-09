@@ -59,6 +59,10 @@ alias llsg='logo-ls -D'
 alias llag='logo-ls -AD'
 alias lllg='logo-ls -alD'
 
+# Fuzzy-find files recursively with a preview
+alias rbrowse="fd --hidden --exclude 'node_modules' --exclude '.git' |
+               fzf --preview='bat --style=numbers --color=always --line-range :500 {}'"
+
 
 ##
 ## Git & GitHub
