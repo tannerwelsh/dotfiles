@@ -16,7 +16,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Change fn + n/m/o/p' to page_up, page_down, home and end keys",
+                        "description": "Change fn + n/m/[/] to page_up, page_down, home and end keys",
                         "manipulators": [
                             {
                                 "from": {
@@ -58,7 +58,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "o",
+                                    "key_code": "[",
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
@@ -77,7 +77,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "p",
+                                    "key_code": "]",
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
@@ -202,7 +202,7 @@
                         "product_id": 45091,
                         "vendor_id": 1133
                     },
-                    "ignore": false,
+                    "ignore": true,
                     "manipulate_caps_lock_led": false,
                     "simple_modifications": []
                 }
