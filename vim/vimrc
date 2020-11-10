@@ -59,11 +59,12 @@ set splitright
 "----------------
 " Colors & themes
 "----------------
-colorscheme dracula
+set background=dark
+colorscheme toast
 
 " set lightline colorscheme
 " options: https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md
-let g:lightline = { 'colorscheme': 'darcula' }
+let g:lightline = { 'colorscheme': 'wombat' }
 
 " enable true colors (24bit)
 " from installation instructions: https://github.com/sonph/onehalf/tree/master/vim
