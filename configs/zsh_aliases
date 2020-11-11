@@ -31,6 +31,9 @@ alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 # Show system info using gotop
 alias sysinfo="gotop"
 
+# Get a timestamp (year to seconds)
+alias timestamp="date +%Y%m%d%H%M%S"
+
 
 ##
 ## File System
