@@ -35,12 +35,8 @@
 	# Fancy logging.
 	#   h = head
 	#   hp = head with patch
-	#   r = recent commits, only current branch
-	#   ra = recent commits, all reachable refs
 	head = !git r -1
 	h = !git head
-	r = !GIT_NO_PAGER=1 git l -30
-	ra = !git r --all
 [branch]
 	autosetuprebase = always
 [core]
