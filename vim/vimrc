@@ -1,3 +1,10 @@
+"
+" Vim configuration for Tanner Welsh
+"
+" Much inspiration taken from:
+" - https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim
+" - https://medium.com/actualize-network/how-to-learn-vim-a-four-week-plan-cd8b376a9b85
+
 set nocompatible " not vi compatible
 
 "-------------
@@ -66,15 +73,6 @@ colorscheme toast
 " options: https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md
 let g:lightline = { 'colorscheme': 'wombat' }
 
-" enable true colors (24bit)
-" from installation instructions: https://github.com/sonph/onehalf/tree/master/vim
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
-
 "---------------------
 " Basic editing config
 "---------------------
@@ -97,6 +95,21 @@ if &term =~ '^screen'
     set ttymouse=xterm2
 endif
 
+"------------------------
+" File finding / browsing
+"------------------------
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+" Tweaks for browsing
+let g:netrw_banner=0        " disable annoying banner
+let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
 "----------------
 " Tab completions
 "----------------
@@ -107,6 +120,11 @@ set wildmenu
 "------------
 " Key mapping
 "------------
+
+" edit this file
+nnoremap <Leader>ve :edit $MYVIMRC<cr>
+" re-source vimrc
+nnoremap <Leader>vr :source $MYVIMRC<cr>
 
 " move between panes
 nnoremap <C-j> <C-w>j
