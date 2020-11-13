@@ -8,9 +8,28 @@
 set nocompatible " not vi compatible
 
 "-------------
-" Package mgmt
+" OS Detection
 "-------------
+if !exists('g:os')
+  if has('win64') || has('win32') || has('win16')
+    let g:os = 'Windows'
+  else
+    " Darwin (Mac) or Linux
+    let g:os = substitute(system('uname'), '\n', '', '')
+  endif
+endif
+
+"--------------------
+" Package/plugin mgmt
+"--------------------
 packadd! dracula
+
+" Add FZF to runtime path
+if g:os == 'Darwin'
+  set rtp+=/usr/local/opt/fzf
+elseif g:os == 'Linux'
+  set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
+endif
 
 "------------------
 " Syntax and indent
