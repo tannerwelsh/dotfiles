@@ -30,6 +30,7 @@
     - sqlite
     - tmux
     - vim
+    - watchman
     - yarn
 
 - cask:
