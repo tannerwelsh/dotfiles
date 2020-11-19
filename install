@@ -2,24 +2,15 @@
 
 set -e
 
-DEFAULT_CONFIG_PREFIX="default"
-CONFIG_SUFFIX=".conf.yaml"
 DOTBOT_DIR="dotbot"
-
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${BASEDIR}"
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-for conf in ${DEFAULT_CONFIG_PREFIX} ${@}; do
-    config_file="$conf"
-    if [[ "$conf" != *"$CONFIG_SUFFIX" ]]; then
-      config_file="${conf}${CONFIG_SUFFIX}"
-    fi
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" \
+  -d "${BASEDIR}" \
+  --plugin-dir dotbot-brew \
+  $@ # pass through options like --only and --except
 
-    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" \
-      -d "${BASEDIR}" \
-      --plugin-dir dotbot-brew \
-      -c "$config_file"
-done

@@ -20,10 +20,12 @@ The main configuration lives in `default.conf.yaml`, and additional machine-spec
 3. Run install script for the given machine, e.g. to use `mac.conf.yaml`:
     ```shell
     $ cd habitat
-    $ ./install mac
+    $ ./install -c mac.conf.yaml
     ```
 
 4. Enjoy your new configuration, with dotfiles symlinked into `~/`!
+
+**NOTE**: install only certain sections with the `--only` flag for install (see dotbot docs for more info), e.g. `./install -c mac.conf.yaml --only link`.
 
 Some of the packages installed might need additional configuration to work properly. Known caveats:
 
