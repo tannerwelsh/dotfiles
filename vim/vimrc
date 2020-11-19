@@ -152,9 +152,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " move between tabs
-map <C-t>h :tabp<cr>
-map <C-t>l :tabn<cr>
-map <C-t>t :tabn<cr>
+nnoremap <C-t>h :tabp<cr>
+nnoremap <C-t>l :tabn<cr>
+nnoremap <C-t>t :tabn<cr>
 
 " --------
 " Commands
