@@ -22,6 +22,7 @@ endif
 "--------------------
 " Package/plugin mgmt
 "--------------------
+packloadall " load all packages in 'start' directory
 packadd! dracula
 
 " Add FZF to runtime path
