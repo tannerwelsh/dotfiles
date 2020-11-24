@@ -162,41 +162,47 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Atelier Lakeside - Dark)
+##
+# COLOR THEME: BEGIN
+#
+
 colors:
   # Default colors
   primary:
-    background: '0x161b1d'
-    foreground: '0x7ea2b4'
+    background: '0x2b303b'
+    foreground: '0xc0c5ce'
 
   # Normal colors
   normal:
-    black:   '0x161b1d'
-    red:     '0xd22d72'
-    green:   '0x568c3b'
-    yellow:  '0x8a8a0f'
-    blue:    '0x257fad'
-    magenta: '0x5d5db1'
-    cyan:    '0x2d8f6f'
-    white:   '0x7ea2b4'
+    black:   '0x2b303b'
+    red:     '0xbf616a'
+    green:   '0xa3be8c'
+    yellow:  '0xebcb8b'
+    blue:    '0x8fa1b3'
+    magenta: '0xb48ead'
+    cyan:    '0x96b5b4'
+    white:   '0xc0c5ce'
 
   # Bright colors
   bright:
-    black:   '0x5a7b8c'
-    red:     '0xd22d72'
-    green:   '0x568c3b'
-    yellow:  '0x8a8a0f'
-    blue:    '0x257fad'
-    magenta: '0x5d5db1'
-    cyan:    '0x2d8f6f'
-    white:   '0xebf8ff'
+    black:   '0x65737e'
+    red:     '0xbf616a'
+    green:   '0xa3be8c'
+    yellow:  '0xebcb8b'
+    blue:    '0x8fa1b3'
+    magenta: '0xb48ead'
+    cyan:    '0x96b5b4'
+    white:   '0xeff1f5'
+#
+# COLOR THEME: END
+##
 
 # Colors (Tomorrow Night)
-#colors:
+# colors:
   # Default colors
-  #primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
+  # primary:
+  #   background: '#1d1f21'
+  #   foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
     #
