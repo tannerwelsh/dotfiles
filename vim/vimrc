@@ -75,14 +75,6 @@ set ignorecase
 set smartcase
 
 "----------------
-" Panes & windows
-"----------------
-
-" open new split panes to right and bottom, which feels more natural
-set splitbelow
-set splitright
-
-"----------------
 " Colors & themes
 "----------------
 set background=dark
@@ -151,10 +143,34 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" move between tabs
-nnoremap <C-t>h :tabp<cr>
-nnoremap <C-t>l :tabn<cr>
-nnoremap <C-t>t :tabn<cr>
+
+"-----------------------
+" Panes, windows, & tabs
+"-----------------------
+
+" open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" Switch between tabs with FZF using <leader>t
+" http://ericnode.info/post/fzf_jump_to_tab_in_vim/
+function TabName(n)
+  let buflist = tabpagebuflist(a:n)
+  let winnr = tabpagewinnr(a:n)
+  return fnamemodify(bufname(buflist[winnr - 1]), ':t')
+endfunction
+
+function! s:jumpToTab(line)
+  let pair = split(a:line, ' ')
+  let cmd = pair[0].'gt'
+  execute 'normal' cmd
+endfunction
+
+nnoremap <silent> <Leader>t :call fzf#run({
+\   'source':  reverse(map(range(1, tabpagenr('$')), 'v:val." "." ".TabName(v:val)')),
+\   'sink':    function('<sid>jumpToTab'),
+\   'down':    tabpagenr('$') + 2
+\ })<CR>
 
 " --------
 " Commands
