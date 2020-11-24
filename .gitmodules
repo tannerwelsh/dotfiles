@@ -23,3 +23,6 @@
 [submodule "vim/pack/airblade/start/vim-gitgutter"]
 	path = vim/pack/airblade/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "vim/pack/tpope/start/surround"]
+	path = vim/pack/tpope/start/surround
+	url = https://tpope.io/vim/surround.git
