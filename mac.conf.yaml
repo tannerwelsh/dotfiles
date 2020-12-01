@@ -29,6 +29,7 @@
     - ruby-build
     - sqlite
     - tmux
+    - tree
     - vim
     - watchman
     - yarn
