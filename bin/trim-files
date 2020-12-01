@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+#
+# Simple way to remove files whose filenames don't appear anywhere else in
+# tracked files. Crude file tree-trimming tool.
+# 
+# Inspired by: https://tanzu.vmware.com/content/blog/a-simple-way-to-detect-unused-files-in-a-project-using-git
+
+source_dir=$1
+
+echo "$source_dir"
+for FILE in $(git ls-files "$source_dir"); do
+  git grep $(basename "$FILE") > /dev/null || git rm "$FILE"
+done
