@@ -4,6 +4,7 @@
     - ~/.tmux/plugins
 
 - link:
+    ~/.ctags: configs/ctags
     ~/.env: configs/env
     ~/.gemrc: configs/gemrc
     ~/.gitconfig: configs/gitconfig
