@@ -143,6 +143,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" yank (copy) / paste to/from system primary clipboard
+nnoremap <Leader>y "*y
+vnoremap <Leader>y "*y
+nnoremap <Leader>p "*p
 
 "-----------------------
 " Panes, windows, & tabs
