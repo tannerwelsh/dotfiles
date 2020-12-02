@@ -22,6 +22,7 @@
 	ds = diff --stat=160,120
 	fa = fetch --all
 	ff = merge --ff-only
+	g = grep -n --color --break --full-name
 	l = log --oneline --graph
 	noff = merge --no-ff
 	p = push
