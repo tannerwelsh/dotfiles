@@ -1,4 +1,4 @@
-# Log: Mag
+# Log: Mac
 
 _A place to log notes on configuring Mac_
 
@@ -21,3 +21,7 @@ Follow instructions in https://docs.docker.com/docker-for-mac/install/
 ### Go Language
 
 https://golang.org/doc/install
+
+### RBenv Ctags
+
+https://github.com/tpope/rbenv-ctags
