@@ -41,7 +41,7 @@ source "$DOTFILES_DIR/configs/zsh_aliases"
 # eval "$(rbenv init -)" - not needed b/c provided by ohmyzsh rbenv plugin
 
 # Go: add GOPATH to path (requires go)
-if type go &>/dev/null; then
+if type go &>/dev/null && [[ ! "$PATH" == *$(go env GOPATH)/bin* ]]; then
   export PATH=$PATH:$(go env GOPATH)/bin
 fi
 
