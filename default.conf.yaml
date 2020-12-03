@@ -2,12 +2,18 @@
 
 - create:
     - ~/.tmux/plugins
+    - ~/.git_template/hooks
 
 - link:
     ~/.ctags: configs/ctags
     ~/.env: configs/env
     ~/.gemrc: configs/gemrc
     ~/.gitconfig: configs/gitconfig
+    ~/.git_template/hooks/ctags: git_hooks/ctags
+    ~/.git_template/hooks/post-checkout: git_hooks/post-checkout
+    ~/.git_template/hooks/post-commit: git_hooks/post-commit
+    ~/.git_template/hooks/post-merge: git_hooks/post-merge
+    ~/.git_template/hooks/post-rewrite: git_hooks/post-rewrite
     ~/.gitignore: configs/gitignore
     ~/.railsrc: configs/railsrc
     ~/.rspec: configs/rspec

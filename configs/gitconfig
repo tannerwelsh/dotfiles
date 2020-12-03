@@ -32,6 +32,7 @@
 	rc = rebase --continue
 	st = status
 	up = pull
+	ctags = !.git/hooks/ctags
 [branch]
 	autosetuprebase = always
 [core]
@@ -52,3 +53,4 @@
 	branch = false
 [init]
 	defaultBranch = main
+	templatedir = ~/.git_template
