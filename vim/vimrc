@@ -78,11 +78,11 @@ set smartcase
 " Colors & themes
 "----------------
 set background=dark
-colorscheme toast
+colorscheme solarized8_flat
 
 " set lightline colorscheme
 " options: https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md
-let g:lightline = { 'colorscheme': 'wombat' }
+let g:lightline = { 'colorscheme': 'solarized dark' }
 
 "---------------------
 " Basic editing config
