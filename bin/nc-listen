@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+
+# Open a port for listening using Netcat
+#
+# To pipe received data to a file:
+# $ nc-listen > FILE.txt
+
+local_ip="" # to be overwritten
+port=5555
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  # For Pop!_OS / Ubuntu
+  local_ip="$(hostname -I | cut -d ' ' -f 1)"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  # For macOS
+  local_ip="$(ipconfig getifaddr en0)"
+fi
+
+echo "Listening..."
+echo
+echo "Send a file with:"
+echo "  nc $local_ip $port < FILE.txt"
+echo 
+echo "Or just send STDIN:"
+echo "  nc $local_ip $port"
+echo
+
+nc -l $local_ip $port
