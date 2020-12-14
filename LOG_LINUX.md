@@ -9,6 +9,12 @@ _A place to log notes on configuring Linux / Ubuntu_
 - `Pop!_Shop`: Pop! OS built-in app store (mostly for GUI tools)
 - `Snap`: another app store / package manager tool with a nifty GUI
 
+## Gnome Themes (OS UI Theming)
+
+Custom themes installed at `/usr/share/themes`.
+
+Example: https://www.pling.com/p/1267246/
+
 ## Keyboard / Mouse Configurations
 
 Install and use `GNOME Tweaks` app (available via Pop! Shop) to make some general modifications to keyboard (e.g. mapping Caps Lock to Control).
