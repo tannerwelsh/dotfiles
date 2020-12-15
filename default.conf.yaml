@@ -15,6 +15,7 @@
     ~/.git_template/hooks/post-merge: git_hooks/post-merge
     ~/.git_template/hooks/post-rewrite: git_hooks/post-rewrite
     ~/.gitignore: configs/gitignore
+    ~/.irbrc: configs/irbrc
     ~/.railsrc: configs/railsrc
     ~/.rspec: configs/rspec
     ~/.sqliterc: configs/sqliterc
