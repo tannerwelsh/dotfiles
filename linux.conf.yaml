@@ -49,3 +49,9 @@
     stdin: true
     stdout: true
     stderr: true
+  -
+    command: sudo apt install entr
+    description: Install entr (easy file watcher + command)
+    stdin: true
+    stdout: true
+    stderr: true
