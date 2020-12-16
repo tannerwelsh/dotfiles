@@ -15,6 +15,7 @@
     - bat
     - ctags
     - direnv
+    - entr
     - fd
     - fzf
     - gotop
