@@ -17,6 +17,7 @@
   - python@3.9
   - rbenv
   - ripgrep
+  - tree
 
 # Shell commands & apt installs
 - shell:
