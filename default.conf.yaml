@@ -23,6 +23,7 @@
     ~/.tmux/plugins/tpm: tpm
     ~/.vim: vim
     ~/.vuerc: configs/vuerc
+    ~/.zshenv: configs/zshenv
     ~/.zshrc: configs/zshrc
     ~/.oh-my-zsh: ohmyzsh
     ~/.oh-my-zsh/custom/themes/tannerwelsh.zsh-theme: themes/tannerwelsh.zsh-theme
