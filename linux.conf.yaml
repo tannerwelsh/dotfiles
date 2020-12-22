@@ -56,3 +56,15 @@
     stdin: true
     stdout: true
     stderr: true
+  -
+    command: sudo apt install httpie
+    description: Install httpie (HTTP tool)
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: sudo apt install openssh-server
+    description: Install OpenSSH Server
+    stdin: true
+    stdout: true
+    stderr: true
