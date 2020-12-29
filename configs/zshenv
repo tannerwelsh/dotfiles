@@ -14,14 +14,18 @@ fi
 
 
 ##
-## LANGUAGE / ENV SETUP SCRIPTS
+## LANGUAGE ENV SETUP
 ##
 
 # Ruby / rbenv
 # eval "$(rbenv init -)" - not needed b/c provided by ohmyzsh rbenv plugin
 
 # Node / nvm
-# not needed b/c handled by ohmyzsh node/nvm plugin
+# Handled by ohmyzsh zsh-nvm plugin
+# These configurations help with load time
+# # Thanks to https://blog.mattclemente.com/2020/06/26/oh-my-zsh-slow-to-load.html
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=false
 
 # Go: add GOPATH to path (requires go)
 if type go &>/dev/null && [[ ! "$PATH" == *$(go env GOPATH)/bin* ]]; then

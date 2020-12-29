@@ -69,14 +69,14 @@ ZSH_THEME="tannerwelsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    zsh-nvm # custom plugin, faster than nvm
     autojump
-    osx
     git # powerful git tab completion
     globalias # Expands all glob expressions, subcommands and aliases (including global).
+    npm
+    osx
     ruby
     rbenv # required for prompt to work
-    node
-    nvm # requried for prompt to work
 )
 
 source $ZSH/oh-my-zsh.sh
