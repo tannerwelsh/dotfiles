@@ -13,6 +13,7 @@
 - brew:
     - autojump
     - bat
+    - coreutils
     - ctags
     - direnv
     - entr
