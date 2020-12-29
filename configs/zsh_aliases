@@ -13,8 +13,10 @@ alias dotfiles="cd $DOTFILES_DIR"
 # Allow aliases to be with sudo
 alias sudo="sudo "
 
-# Easily refresh the shell by sourcing .zsh
-alias refresh="source ~/.zshrc"
+# Start a fresh shell
+# Don't source .zshrc because that is bad
+# https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ#how-do-i-reload-the-zshrc-file
+alias refresh="exec zsh"
 
 # Copy my public key to the pasteboard
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
