@@ -1,14 +1,19 @@
 ##
-## ENV SETTINGS
+## INTERACTIVE SHELL OPTIONS
 ##
-source ~/.env
 
+# Don't store commands starting with a space in history
+setopt HIST_IGNORE_SPACE
 
-##
-## GENERAL ZSH CONFIG
-## Must come before other settings
-##
-source "$DOTFILES_DIR/configs/zsh_config"
+# Prefer US English and use UTF-8
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="${yellow}";
+
+# Use 256 colors
+export TERM=xterm-256color
 
 ##
 ## OS-SPECIFIC CONFIGS
@@ -20,30 +25,32 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   # For macOS
 fi
 
+##
+## COMPLETION
+##
+
+# Homebrew Shell Completion https://docs.brew.sh/Shell-Completion
+# Must happen before compinit is called (which ohmyzsh does)
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
 
 ##
 ## OH-MY-ZSH CONFIG
 ##
 source "$DOTFILES_DIR/configs/zsh_ohmyzsh_config"
 
-
 ##
 ## CUSTOM ZSH ALIASES
 ##
 source "$DOTFILES_DIR/configs/zsh_aliases"
 
-
 ##
-## LANGUAGE / ENV SETUP SCRIPTS
+## TOOLS
 ##
-
-# Ruby / rbenv
-# eval "$(rbenv init -)" - not needed b/c provided by ohmyzsh rbenv plugin
-
-# Go: add GOPATH to path (requires go)
-if type go &>/dev/null && [[ ! "$PATH" == *$(go env GOPATH)/bin* ]]; then
-  export PATH=$PATH:$(go env GOPATH)/bin
-fi
 
 # FZF: command line fuzzy finder https://github.com/junegunn/fzf
 if [[ -f ~/.fzf.zsh ]]; then
@@ -66,5 +73,15 @@ if [[ -f ~/.fzf.zsh ]]; then
   fi
 fi
 
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
+
 # Direnv https://direnv.net
 eval "$(direnv hook zsh)"
+
+##
+## Finally, remove duplicates in $PATH
+##
+export PATH=$(consolidate-path "$PATH")

@@ -1,1 +1,33 @@
-source "$HOME/.cargo/env"
+##
+## ENV SETTINGS
+##
+source ~/.env
+
+##
+## Path Management
+##
+
+# Add .dotfiles/bin scripts to path
+if [[ ! "$PATH" == *"$DOTFILES_DIR/bin"* ]]; then
+  export PATH=$DOTFILES_DIR/bin:$PATH
+fi
+
+
+##
+## LANGUAGE / ENV SETUP SCRIPTS
+##
+
+# Ruby / rbenv
+# eval "$(rbenv init -)" - not needed b/c provided by ohmyzsh rbenv plugin
+
+# Node / nvm
+# not needed b/c handled by ohmyzsh node/nvm plugin
+
+# Go: add GOPATH to path (requires go)
+if type go &>/dev/null && [[ ! "$PATH" == *$(go env GOPATH)/bin* ]]; then
+  export PATH=$PATH:$(go env GOPATH)/bin
+fi
+
+function env_rust() {
+  source "$HOME/.cargo/env"
+}
