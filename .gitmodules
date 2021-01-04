@@ -47,3 +47,6 @@
 [submodule "vim/pack/kite/start/kite"]
 	path = vim/pack/kite/start/kite
 	url = https://github.com/kiteco/vim-plugin.git
+[submodule "vim/pack/junegunn/start/fzf"]
+	path = vim/pack/junegunn/start/fzf
+	url = git@github.com:junegunn/fzf.vim.git
