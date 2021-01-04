@@ -1,2 +1,5 @@
 # ignore Vim history files
 *.netrwhist
+
+# ignore Kite vim plugin
+/vim/pack/kite
