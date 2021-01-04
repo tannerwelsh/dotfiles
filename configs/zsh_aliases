@@ -30,8 +30,11 @@ alias map="xargs -n1"
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 
-# Show system info using gotop
-alias sysinfo="gotop"
+# Show hardware metrics using gotop
+alias sysstats="gotop"
+
+# Show OS, hardware info
+alias sysinfo="neofetch"
 
 # Get a timestamp (year to seconds)
 alias timestamp="date +%Y%m%d%H%M%S"
