@@ -44,3 +44,6 @@
 [submodule "vim/pack/themes/start/nord"]
 	path = vim/pack/themes/start/nord
 	url = https://github.com/arcticicestudio/nord-vim.git
+[submodule "vim/pack/kite/start/kite"]
+	path = vim/pack/kite/start/kite
+	url = https://github.com/kiteco/vim-plugin.git
