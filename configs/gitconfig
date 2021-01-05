@@ -36,6 +36,8 @@
 	ctags = !.git/hooks/ctags
 [branch]
 	autosetuprebase = always
+[fetch]
+	prune = true
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
