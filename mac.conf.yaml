@@ -15,6 +15,7 @@
     - bat
     - coreutils
     - ctags
+    - git-delta
     - direnv
     - entr
     - fd
