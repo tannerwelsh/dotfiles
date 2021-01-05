@@ -79,6 +79,7 @@ alias rbrowse="fd --hidden --exclude 'node_modules' --exclude '.git' |
 alias editmodified='vim -p $(git diff --name-only --diff-filter=M HEAD | uniq)'
 alias editnew='vim -p $(git diff --name-only --diff-filter=A HEAD | uniq)'
 alias editunstaged='vim -p $(git diff --name-only --diff-filter=U | uniq)'
+alias editunmerged='vim -p $(git diff --name-only | uniq)'
 
 alias ci="code-insiders ."
 
