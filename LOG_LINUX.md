@@ -42,3 +42,7 @@ Followed instructions in https://docs.docker.com/engine/install/ubuntu/
 ### Go Language
 
 https://golang.org/doc/install
+
+### Delta Tool (better diff)
+
+https://github.com/dandavison/delta
