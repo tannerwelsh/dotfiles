@@ -4,6 +4,7 @@
 	email = tannerwelsh@gmail.com
 [credential]
 	helper = osxkeychain
+	helper = cache --timeout 30000
 [alias]
 	lsalias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	a = add
