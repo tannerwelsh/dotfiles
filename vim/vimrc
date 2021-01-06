@@ -145,9 +145,17 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " yank (copy) / paste to/from system primary clipboard
-nnoremap <Leader>y "*y
-vnoremap <Leader>y "*y
-nnoremap <Leader>p "*p
+if g:os == 'Darwin'
+  " macOS only has one system clipboard
+  nnoremap <Leader>y "*y
+  vnoremap <Leader>y "*y
+  nnoremap <Leader>p "*p
+elseif g:os == 'Linux'
+  " on Linux this uses the desktop clipboard (ctrl-c/x/v)
+  nnoremap <Leader>y "+y
+  vnoremap <Leader>y "+y
+  nnoremap <Leader>p "+p
+endif
 
 "-----------------------
 " Panes, windows, & tabs
