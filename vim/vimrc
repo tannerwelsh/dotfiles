@@ -123,11 +123,15 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 "----------------
-" Tab completions
+" Auto completion
 "----------------
+
 " tab completion for files/buffers
 set wildmode=longest,list
 set wildmenu
+
+" don't scan included files for ctrl-n completion menu
+setglobal complete-=i
 
 "------------
 " Key mapping
