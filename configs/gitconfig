@@ -6,17 +6,17 @@
 	helper = osxkeychain
 	helper = cache --timeout 30000
 [alias]
-	lsalias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	a = add
 	aa = add --all
-	ap = add -p
 	amend = commit --amend
+	ap = add -p
 	b = branch
 	c = commit --verbose
 	ca = commit --amend
 	cf = commit --fixup
 	co = checkout
 	cs = commit --squash
+	ctags = !.git/hooks/ctags
 	d = diff
 	dc = diff --cached
 	dh1 = diff HEAD~1
@@ -25,15 +25,17 @@
 	ff = merge --ff-only
 	g = grep -n --color --break --full-name
 	l = log --oneline --graph
+	ls = ls-files
+	lsuntracked = ls-files -o --exclude-standard 
+	lsalias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	noff = merge --no-ff
 	p = push
 	pom = push origin master
 	pullff = pull --ff-only
-	ri = rebase --interactive --autosquash
 	rc = rebase --continue
+	ri = rebase --interactive --autosquash
 	st = status
 	up = pull
-	ctags = !.git/hooks/ctags
 [branch]
 	autosetuprebase = always
 [fetch]
