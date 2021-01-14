@@ -68,3 +68,9 @@
     stdin: true
     stdout: true
     stderr: true
+  -
+    command: sudo apt install jq
+    description: Install jq JSON query tool
+    stdin: true
+    stdout: true
+    stderr: true
