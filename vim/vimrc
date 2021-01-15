@@ -161,6 +161,9 @@ elseif g:os == 'Linux'
   nnoremap <Leader>p "+p
 endif
 
+" allow using . in visual mode to repeat command on each line
+xnoremap . :normal .<CR>
+
 "-----------------------
 " Panes, windows, & tabs
 "-----------------------
