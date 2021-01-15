@@ -137,6 +137,8 @@ setglobal complete-=i
 " Key mapping
 "------------
 
+let mapleader = "'" " map leader to single quote
+
 " edit this file
 nnoremap <Leader>ve :edit $MYVIMRC<cr>
 " re-source vimrc
@@ -172,25 +174,21 @@ xnoremap . :normal .<CR>
 set splitbelow
 set splitright
 
-" Switch between tabs with FZF using <leader>t
-" http://ericnode.info/post/fzf_jump_to_tab_in_vim/
-function TabName(n)
-  let buflist = tabpagebuflist(a:n)
-  let winnr = tabpagewinnr(a:n)
-  return fnamemodify(bufname(buflist[winnr - 1]), ':t')
-endfunction
-
-function! s:jumpToTab(line)
-  let pair = split(a:line, ' ')
-  let cmd = pair[0].'gt'
-  execute 'normal' cmd
-endfunction
-
-nnoremap <silent> <Leader>t :call fzf#run({
-\   'source':  reverse(map(range(1, tabpagenr('$')), 'v:val." "." ".TabName(v:val)')),
-\   'sink':    function('<sid>jumpToTab'),
-\   'down':    tabpagenr('$') + 2
-\ })<CR>
+" FZF shortcuts
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>g :GFiles?<CR>
+nnoremap <Leader>gc :BCommits<CR>
+nnoremap <Leader>w :Windows<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>l :Lines<CR>
+nnoremap <Leader>bl :BLines<CR>
+nnoremap <Leader>t/ :Tags<space>
+nnoremap <Leader>tt :Tags<CR>
+nnoremap <Leader>bt :BTags<CR>
+nnoremap <Leader>r :Rg<space>
+nnoremap <Leader>rr :Rg<CR>
+nnoremap <Leader>rw yiw:Rg<space><C-R>"<CR>
+vnoremap <Leader>rr y:Rg<space><C-R>0<CR>
 
 " --------
 " Commands
@@ -205,3 +203,6 @@ fun! TrimWhitespace()
 endfun
 
 command! TrimWS call TrimWhitespace()
+
+nnoremap <Leader>tw :TrimWS<CR>
+
