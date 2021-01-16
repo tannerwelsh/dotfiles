@@ -74,3 +74,9 @@
     stdin: true
     stdout: true
     stderr: true
+  -
+    command: sudo apt install fail2ban
+    description: Install fail2ban brute-force security for SSH
+    stdin: true
+    stdout: true
+    stderr: true

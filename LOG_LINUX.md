@@ -33,6 +33,28 @@ For starting applications when the desktop environment (GNOME for Pop! OS) loads
 
 See  https://wiki.archlinux.org/index.php/Autostarting for more info.
 
+## SSH Server
+
+Created a couple of wrappers for managing the ssh server:
+
+- ssh-start
+- ssh-stop
+- ssh-status
+
+To make connections more secure, _only_ allow key-based auth (not password) by changing /etc/ssh/sshd_config:
+
+```
+PasswordAuthentication no
+```
+
+Any clients which have their public keys listed in ~/.ssh/authorized_keys will be allowed access, but none others.
+
+An added layer of security is provided by the fail2ban package (temporarily blocks IPs with repeated failed password attempts).
+
+Additionally, change the SSH port to obscure thing even a little bit further. This can also be done in /etc/ssh/sshd_config.
+
+Much inspiration for these security steps taken from https://thepcspy.com/read/making-ssh-secure/\#use-key-based-authentication-and-disable-password-authentication
+
 ## Non-standard Installs
 
 ### Docker
