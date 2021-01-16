@@ -1,4 +1,6 @@
 Host nova.local
+  User tanner
+  Port 11132
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
