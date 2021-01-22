@@ -75,6 +75,9 @@ set wrapscan " wrap search to beginning of file
 set ignorecase
 set smartcase
 
+" consider dashes as part of a word object, not word separators
+set iskeyword+=-
+
 "----------------
 " Colors & themes
 "----------------
