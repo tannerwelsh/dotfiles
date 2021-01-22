@@ -209,3 +209,7 @@ command! TrimWS call TrimWhitespace()
 
 nnoremap <Leader>tw :TrimWS<CR>
 
+" Quick trim + write file
+" (<bar> stands in for the | char, used to chain commands)
+nnoremap <Leader>ww :exe "silent! TrimWS" <bar> w<CR>
+
