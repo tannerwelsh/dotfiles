@@ -71,6 +71,10 @@ alias lllg='logo-ls -alD'
 alias rbrowse="fd --hidden --exclude 'node_modules' --exclude '.git' |
                fzf --preview='bat --style=numbers --color=always --line-range :500 {}'"
 
+# Rename files. Use in pipe on file lists, e.g. "ls *.png | rename_as_snake_case"
+alias rename_as_snake_case='while read file; do mv "$file" $(echo $file | tr " " "_" | tr "[:upper:]" "[:lower:]"); done'
+alias rename_with_spaces='while read file; do mv "$file" "${file//_/ }"; done'
+
 
 ##
 ## Editing
