@@ -167,7 +167,18 @@ elseif g:os == 'Linux'
 endif
 
 " allow using . in visual mode to repeat command on each line
+" thanks to Drew Neil's Practical Vim course/book
 xnoremap . :normal .<CR>
+
+" shortcut to apply macro across selected lines in visual mode
+"   (prompts for macro id)
+" thanks to Drew Neil's Practical Vim course/book
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
 
 "-----------------------
 " Panes, windows, & tabs
