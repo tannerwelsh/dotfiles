@@ -53,3 +53,6 @@
 [submodule "vim/pack/ap/start/vim-css-color"]
 	path = vim/pack/ap/start/vim-css-color
 	url = https://github.com/ap/vim-css-color
+[submodule "vim/pack/junegunn/start/goyo"]
+	path = vim/pack/junegunn/start/goyo
+	url = https://github.com/junegunn/goyo.vim
