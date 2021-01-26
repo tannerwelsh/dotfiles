@@ -3,3 +3,6 @@
 
 # ignore Kite vim plugin
 /vim/pack/kite
+
+# don't include downloaded binary gotop
+/bin/gotop
