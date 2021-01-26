@@ -65,6 +65,10 @@ Followed instructions in https://docs.docker.com/engine/install/ubuntu/
 
 https://golang.org/doc/install
 
+Go packages:
+
+- gotop (for sysstats alias): https://github.com/xxxserxxx/gotop/releases => install binary into ~/.dotfiles/bin
+
 ### Delta Tool (better diff)
 
 https://github.com/dandavison/delta
