@@ -84,6 +84,8 @@ alias editunmerged='vim -p $(git diff --name-only | uniq)'
 
 alias ci="code-insiders ."
 
+alias rmswp="rm **/.*.swp" # remove Vim's swp files
+
 
 ##
 ## Git & GitHub
