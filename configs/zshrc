@@ -49,6 +49,11 @@ source "$DOTFILES_DIR/configs/zsh_ohmyzsh_config"
 source "$DOTFILES_DIR/configs/zsh_aliases"
 
 ##
+## CUSTOM FUNCTIONS
+##
+source "$DOTFILES_DIR/configs/zsh_functions"
+
+##
 ## TOOLS
 ##
 

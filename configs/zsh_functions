@@ -1,0 +1,21 @@
+##
+## CUSTOM FUNCTIONS
+##
+
+
+# Capture/grab STDOUT for reuse
+# Thanks to https://stackoverflow.com/a/58598185
+#
+# Example:
+#   
+# $ find . -name 'filename' | cap
+# /path/to/filename
+
+# $ ret
+# /path/to/filename
+
+# capture the output of a command so it can be retrieved with ret
+cap () { tee /tmp/capture.out}
+
+# return the output of the most recent command that was captured by cap
+ret () { cat /tmp/capture.out }
