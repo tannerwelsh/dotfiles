@@ -58,6 +58,12 @@ alias lat="ls -AGFoth"
 # Concatenate and print content of files (add line numbers)
 alias catn="cat -n"
 
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  alias fd="fdfind" # keep consistency w/ mac command
+fi
+
+
 # Fuzzy-find files recursively with a preview
 alias rbrowse="fd --hidden --exclude 'node_modules' --exclude '.git' |
                fzf --preview='bat --style=numbers --color=always --line-range :500 {}'"
