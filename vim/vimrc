@@ -81,6 +81,11 @@ set smartcase
 set iskeyword+=-
 
 "----------------
+" Built-in macros
+"----------------
+runtime macros/matchit.vim " enables using % to jump between HTML tags
+
+"----------------
 " Colors & themes
 "----------------
 set background=dark
