@@ -241,3 +241,16 @@ nnoremap <Leader>tw :TrimWS<CR>
 " (<bar> stands in for the | char, used to chain commands)
 nnoremap <Leader>ww :exe "silent! TrimWS" <bar> w<CR>
 
+
+" ------------
+" Text Objects
+" ------------
+
+" x-123-y
+" call textobj#user#plugin('token-segments', {
+" \   'kebab-case': {
+" \     'pattern': ['-', '-'],
+" \     'select': ['ad', 'id'],
+" \   },
+" ' })
+
