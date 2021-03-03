@@ -211,9 +211,11 @@ if g:os == 'Darwin'
 endif
 
 " FZF shortcuts
-nnoremap <Leader>f :Files<CR>
-nnoremap <Leader>g :GFiles?<CR>
-nnoremap <Leader>gc :BCommits<CR>
+nnoremap <Leader>f/ :Files<space>
+nnoremap <Leader>ff :Files<CR>
+nnoremap <Leader>gf :GFiles?<CR>
+nnoremap <Leader>cc :Commits<CR>
+nnoremap <Leader>bc :BCommits<CR>
 nnoremap <Leader>w :Windows<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>l :Lines<CR>
@@ -221,7 +223,7 @@ nnoremap <Leader>bl :BLines<CR>
 nnoremap <Leader>t/ :Tags<space>
 nnoremap <Leader>tt :Tags<CR>
 nnoremap <Leader>bt :BTags<CR>
-nnoremap <Leader>r :Rg<space>
+nnoremap <Leader>r/ :Rg<space>
 nnoremap <Leader>rr :Rg<CR>
 nnoremap <Leader>rw yiw:Rg<space><C-R>"<CR>
 vnoremap <Leader>rr y:Rg<space><C-R>0<CR>
