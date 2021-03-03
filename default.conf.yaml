@@ -3,9 +3,10 @@
 - create:
     - ~/.tmux/plugins
     - ~/.git_template/hooks
+    - ~/.ctags.d
 
 - link:
-    ~/.ctags: configs/ctags
+    ~/.ctags.d/.ctags: configs/ctags
     ~/.env: configs/env
     ~/.gemrc: configs/gemrc
     ~/.gitconfig: configs/gitconfig

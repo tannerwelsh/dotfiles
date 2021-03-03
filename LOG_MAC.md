@@ -25,3 +25,7 @@ https://golang.org/doc/install
 ### RBenv Ctags
 
 https://github.com/tpope/rbenv-ctags
+
+### Universal Ctags
+
+Install manually through homebrew: https://github.com/universal-ctags/homebrew-universal-ctags
