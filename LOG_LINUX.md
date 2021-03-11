@@ -72,3 +72,9 @@ Go packages:
 ### Delta Tool (better diff)
 
 https://github.com/dandavison/delta
+
+### Universal Ctags
+
+https://github.com/universal-ctags/ctags
+
+Install via Snap store
