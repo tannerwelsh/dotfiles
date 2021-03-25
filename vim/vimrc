@@ -199,6 +199,9 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 set splitbelow
 set splitright
 
+" go to file in vsplit pane
+nnoremap gv <C-W>vgf
+
 " Re-map FZF's Rg function to use ctrl-a/d instead of alt-a/d (no alt on mac)
 if g:os == 'Darwin'
   command! -bang -nargs=* Rg
