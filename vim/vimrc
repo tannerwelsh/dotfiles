@@ -231,6 +231,9 @@ nnoremap <Leader>rr :Rg<CR>
 nnoremap <Leader>rw yiw:Rg<space><C-R>"<CR>
 vnoremap <Leader>rr y:Rg<space><C-R>0<CR>
 
+" TagBar shortcuts
+nnoremap <Leader>tb :TagbarToggle<CR>
+
 " --------
 " Commands
 " --------
