@@ -68,8 +68,14 @@ fi
 alias rbrowse="fd --hidden --exclude 'node_modules' --exclude '.git' |
                fzf --preview='bat --style=numbers --color=always --line-range :500 {}'"
 
+# Convert Title Case to snake_case, e.g. "echo 'Title Case' | title_to_snake"
+alias title_to_snake='tr " " "_" | tr "[:upper:]" "[:lower:]"'
+
+# Convert camelCase to snake_case, e.g. "echo 'fooBar' | camel_to_snake"
+alias camel_to_snake="sed 's/\([a-z]\)\([A-Z]\)/\1_\2/g;s/^_//' | tr '[:upper:]' '[:lower:]'"
+
 # Rename files. Use in pipe on file lists, e.g. "ls *.png | rename_as_snake_case"
-alias rename_as_snake_case='while read file; do mv "$file" $(echo $file | tr " " "_" | tr "[:upper:]" "[:lower:]"); done'
+alias rename_as_snake_case='while read file; do mv "$file" $(echo $file | title_to_snake); done'
 alias rename_with_spaces='while read file; do mv "$file" "${file//_/ }"; done'
 
 
