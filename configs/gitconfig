@@ -11,6 +11,7 @@
 	amend = commit --amend
 	ap = add -p
 	b = branch
+	ba = branch -a
 	c = commit --verbose
 	ca = commit --amend
 	cf = commit --fixup
@@ -26,11 +27,12 @@
 	g = grep -n --color --break --full-name
 	l = log --oneline --graph
 	ls = ls-files
-	lsuntracked = ls-files -o --exclude-standard 
+	lsuntracked = ls-files -o --exclude-standard
 	lsalias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	noff = merge --no-ff
 	p = push
 	pom = push origin master
+	prune = remote prune origin
 	pullff = pull --ff-only
 	rc = rebase --continue
 	ri = rebase --interactive --autosquash
@@ -61,6 +63,6 @@
 	defaultBranch = main
 	templatedir = ~/.git_template
 [delta]
-	syntax-theme = Nord 
+	syntax-theme = Nord
 [interactive]
 	diffFilter = delta --color-only
