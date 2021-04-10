@@ -78,3 +78,7 @@ https://github.com/dandavison/delta
 https://github.com/universal-ctags/ctags
 
 Install via Snap store
+
+## GPU Drivers
+
+To switch between graphics card drivers, use the `software-properties-gtk` package/command and go to the "Additional Drivers" tab. There you can select which driver to use.
