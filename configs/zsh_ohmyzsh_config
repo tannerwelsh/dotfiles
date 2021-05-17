@@ -72,6 +72,7 @@ plugins=(
     zsh-nvm # custom plugin, faster than nvm
     autojump
     git # powerful git tab completion
+    gh
     # globalias # Expands all glob expressions, subcommands and aliases (including global).
     npm
     osx
