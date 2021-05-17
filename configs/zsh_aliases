@@ -105,9 +105,6 @@ for gitalias in $(git config --get-regexp ^alias\. | sed -e 's/^alias\.\([^ ]*\)
   alias "g$gitalias"="git $gitalias"
 done
 
-# Alias hub to git
-eval "$(hub alias -s)"
-
 
 ##
 ## Network
