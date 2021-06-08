@@ -173,6 +173,12 @@ elseif g:os == 'Linux'
   nnoremap <Leader>p "+p
 endif
 
+" RSpec.vim mappings
+map <Leader>st :call RunCurrentSpecFile()<CR>
+map <Leader>ss :call RunNearestSpec()<CR>
+map <Leader>sl :call RunLastSpec()<CR>
+map <Leader>sa :call RunAllSpecs()<CR>
+
 " allow using . in visual mode to repeat command on each line
 " thanks to Drew Neil's Practical Vim course/book
 xnoremap . :normal .<CR>

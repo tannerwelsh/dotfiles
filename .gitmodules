@@ -74,3 +74,6 @@
 [submodule "vim/pack/preservim/start/tagbar"]
 	path = vim/pack/preservim/start/tagbar
 	url = https://github.com/preservim/tagbar
+[submodule "vim/pack/thoughtbot/start/vim-spec"]
+	path = vim/pack/thoughtbot/start/vim-spec
+	url = https://github.com/thoughtbot/vim-rspec
