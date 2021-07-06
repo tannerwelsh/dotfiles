@@ -105,6 +105,9 @@ for gitalias in $(git config --get-regexp ^alias\. | sed -e 's/^alias\.\([^ ]*\)
   alias "g$gitalias"="git $gitalias"
 done
 
+# Pass search term to look for all commits that match the search term (Regex supported)
+# See man page for git-log for usage on -G and -S (only matches when term added/removed)
+alias glsearch='git log -p -G'
 
 ##
 ## Network
