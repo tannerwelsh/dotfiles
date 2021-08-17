@@ -1,0 +1,6 @@
+# Configuration for Pry gem
+#
+# More info: https://github.com/pry/pry/wiki/Customization-and-configuration
+
+Pry.config.color = true
+Pry.config.editor = "vim"
