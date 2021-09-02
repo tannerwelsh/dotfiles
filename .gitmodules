@@ -77,3 +77,6 @@
 [submodule "vim/pack/thoughtbot/start/vim-spec"]
 	path = vim/pack/thoughtbot/start/vim-spec
 	url = https://github.com/thoughtbot/vim-rspec
+[submodule "vim/pack/tpope/start/abolish"]
+	path = vim/pack/tpope/start/abolish
+	url = https://github.com/tpope/vim-abolish
