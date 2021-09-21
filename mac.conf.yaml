@@ -36,6 +36,7 @@
     - tree
     - vim
     - watchman
+    - xsv
     - yarn
 
 - cask:
