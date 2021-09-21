@@ -23,6 +23,7 @@
     - heroku
     - highlight
     - hub
+    - miller
     - postgresql
     - python@3.8
     - rbenv
