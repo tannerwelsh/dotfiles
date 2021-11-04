@@ -50,7 +50,6 @@
     - chromedriver
 
     # Quick look plugins
-    - qlcolorcode # syntax highlighting, depends on highlight package
     - qlimagesize # shows image dimensions
     - qlmarkdown
     - qlstephen # view various text files
