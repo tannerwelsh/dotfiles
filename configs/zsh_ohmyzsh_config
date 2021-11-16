@@ -75,7 +75,7 @@ plugins=(
     gh
     # globalias # Expands all glob expressions, subcommands and aliases (including global).
     npm
-    osx
+    macos
     ruby
     rbenv # required for prompt to work
 )
