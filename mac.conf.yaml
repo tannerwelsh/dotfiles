@@ -5,9 +5,10 @@
       path: configs/alacritty-mac.yml
       create: true
     ~/.ssh/config: configs/ssh
-    ~/.config/karabiner/karabiner.json:
-      create: true
-      path: configs/karabiner.json
+    # Currently not using Karabiner
+    # ~/.config/karabiner/karabiner.json:
+    #   create: true
+    #   path: configs/karabiner.json
 
 # Homebrew casks and formulas (enabled with dotbot-brew plugin)
 - brew:
@@ -19,11 +20,9 @@
     - entr
     - fd
     - fzf
+    - gh
     - gotop
     - heroku
-    - highlight
-    - hub
-    - miller
     - postgresql
     - python@3.8
     - rbenv
@@ -35,7 +34,6 @@
     - tmux
     - tree
     - vim
-    - watchman
     - xsv
     - yarn
 
@@ -50,7 +48,6 @@
     - chromedriver
 
     # Quick look plugins
-    - qlimagesize # shows image dimensions
     - qlmarkdown
     - qlstephen # view various text files
     - quicklook-csv
