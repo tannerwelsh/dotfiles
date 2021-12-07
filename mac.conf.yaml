@@ -5,6 +5,7 @@
       path: configs/alacritty-mac.yml
       create: true
     ~/.ssh/config: configs/ssh
+    ~/.zprofile: configs/zprofile
     # Currently not using Karabiner
     # ~/.config/karabiner/karabiner.json:
     #   create: true
