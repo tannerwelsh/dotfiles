@@ -27,7 +27,7 @@ packadd! dracula
 
 " Add FZF to runtime path
 if g:os == 'Darwin'
-  set rtp+=/usr/local/opt/fzf
+  set rtp+=/opt/homebrew/opt/fzf
 elseif g:os == 'Linux'
   set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
 endif
