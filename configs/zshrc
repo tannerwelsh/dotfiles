@@ -23,6 +23,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   source "$DOTFILES_DIR/configs/zsh_linux_config"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   # For macOS
+  source "$DOTFILES_DIR/configs/zsh_mac_config"
 fi
 
 ##
