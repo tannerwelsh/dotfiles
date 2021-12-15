@@ -84,9 +84,6 @@ timezsh() {
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
 
-# GPG (for signing git commits)
-export GPG_TTY=$(tty)
-
 # Direnv https://direnv.net
 eval "$(direnv hook zsh)"
 

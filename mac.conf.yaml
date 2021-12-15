@@ -5,6 +5,9 @@
       path: configs/alacritty-mac.yml
       create: true
     ~/.ssh/config: configs/ssh
+    ~/.gnupg/gpg-agent.conf:
+      path: configs/gpg-agent.conf
+      create: true
     # Currently not using Karabiner
     # ~/.config/karabiner/karabiner.json:
     #   create: true
@@ -27,6 +30,7 @@
     - gotop
     - gpg
     - heroku
+    - pinentry-mac
     - postgresql
     - python@3.8
     - rbenv
