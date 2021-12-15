@@ -6,6 +6,16 @@ Built around @anishathalye's [dotbot](https://github.com/anishathalye/dotbot/).
 
 The main configuration lives in `default.conf.yaml`, and additional machine-specific configurations can be found in additional `*.conf.yaml` files.
 
+## Mac vs Linux
+
+Since this configuration is meant to support both Mac and Linux machines, there are some slight differences.
+
+Most of these can be resolved by installing the platform-specific config (e.g. `mac.conf.yaml`), but some (such as those which affect statically tracked files like `config/gitconfig`) must be handled by using a different branch.
+
+For this, before installing make sure to use the appropriate branch for your platform:
+
+- Mac: https://github.com/tannerwelsh/dotfiles/tree/main-mac
+
 ## Installation
 
 1. Clone this repo at `~/.dotfiles` - this ensures that the `DOTFILES_DIR` environment variable is exported correctly.
