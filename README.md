@@ -58,9 +58,9 @@ You will find aliases for common commands in `configs/zsh_aliases`, although som
 Some useful ones to be aware of:
 
 ```shell
-$ dotfiles          # => navigate to this directory
-$ _alias            # => open zsh_aliases file in $EDITOR
-$ refresh           # => re-source ~/.zshrc in shell (to include latest changes)
+$ dotfiles          # navigate to this directory
+$ _alias            # open zsh_aliases file in $EDITOR
+$ refresh           # re-source ~/.zshrc in shell (to include latest changes)
 ```
 
 ## Submodules
