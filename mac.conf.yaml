@@ -10,6 +10,9 @@
     #   create: true
     #   path: configs/karabiner.json
 
+- create:
+    - ~/.gnupg
+
 # Homebrew casks and formulas (enabled with dotbot-brew plugin)
 - brew:
     - autojump
@@ -22,6 +25,7 @@
     - fzf
     - gh
     - gotop
+    - gpg
     - heroku
     - postgresql
     - python@3.8

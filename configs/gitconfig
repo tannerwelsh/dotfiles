@@ -2,6 +2,7 @@
 [user]
 	name = Tanner Welsh
 	email = tannerwelsh@gmail.com
+	signingkey = D041AD3EE3D2439F
 [credential]
 	helper = osxkeychain
 	helper = cache --timeout 30000
@@ -66,3 +67,5 @@
 	syntax-theme = Nord
 [interactive]
 	diffFilter = delta --color-only
+[commit]
+	gpgsign = true
