@@ -29,7 +29,7 @@ For this, before installing make sure to use the appropriate branch for your pla
 
 3. Run install script for the given machine, e.g. to use `mac.conf.yaml`:
     ```shell
-    $ cd habitat
+    $ cd dotfiles
     $ ./install -c mac.conf.yaml
     ```
 
