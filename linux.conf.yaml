@@ -6,15 +6,12 @@
       create: true
     ~/.fzf.bash: configs/fzf.bash
     ~/.fzf.zsh: configs/fzf.zsh
-    ~/.xbindkeysrc: configs/xbindkeysrc
-    ~/.xmodmap: configs/xmodmap
 
 # Homebrew formulas
 
 - brew:
   - fzf
-  - hub
-  - python@3.9
+  - git-delta
   - rbenv
   - ripgrep
   - tree
@@ -22,25 +19,14 @@
 # Shell commands & apt installs
 - shell:
   -
-    command: "command -v bat"
-    description: Install bat manually (augmented cat command)
+    command: sudo apt install bat
+    description: Install bat (augmented cat command)
+    stdin: true
     stderr: true
     stdout: true
   -
     command: sudo apt install fd-find
     description: Install fdfind tool for finding files
-    stdin: true
-    stdout: true
-    stderr: true
-  -
-    command: sudo apt install xbindkeys
-    description: Install xbindkeys for remapping key input
-    stdin: true
-    stdout: true
-    stderr: true
-  -
-    command: sudo apt install xautomation
-    description: Install xautomation to control X from command line
     stdin: true
     stdout: true
     stderr: true
