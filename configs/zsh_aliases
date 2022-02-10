@@ -101,7 +101,7 @@ alias g="git"
 
 # Define git aliases in gitconfig, just add short versions
 # here. E.g. `git c` (for commit) is aliased to `gc`
-for gitalias in $(git config --get-regexp ^alias\. | sed -e 's/^alias\.\([^ ]*\) .*$/\1/'); do
+for gitalias in $(git config --get-regexp alias\. | sed -e 's/^alias\.\([^ ]*\) .*$/\1/'); do
   alias "g$gitalias"="git $gitalias"
 done
 
