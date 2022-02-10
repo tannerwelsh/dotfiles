@@ -40,11 +40,6 @@ if type brew &>/dev/null; then
 fi
 
 ##
-## OH-MY-ZSH CONFIG
-##
-source "$DOTFILES_DIR/configs/zsh_ohmyzsh_config"
-
-##
 ## CUSTOM ZSH ALIASES
 ##
 source "$DOTFILES_DIR/configs/zsh_aliases"
