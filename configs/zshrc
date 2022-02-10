@@ -31,7 +31,7 @@ fi
 ##
 
 # Homebrew Shell Completion https://docs.brew.sh/Shell-Completion
-# Must happen before compinit is called (which ohmyzsh does)
+# Must happen before compinit is called
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
