@@ -12,3 +12,5 @@ alias ssh-start='sudo systemctl start ssh'
 alias ssh-status='sudo systemctl status ssh'
 alias ssh-stop='sudo systemctl stop ssh'
 
+# Add autojump tool
+source /usr/share/autojump/autojump.sh

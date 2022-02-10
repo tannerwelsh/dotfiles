@@ -19,6 +19,12 @@
 # Shell commands & apt installs
 - shell:
   -
+    command: sudo apt install autojump
+    description: Install autojump to quickly navigate filesystem
+    stdin: true
+    stderr: true
+    stdout: true
+  -
     command: sudo apt install bat
     description: Install bat (augmented cat command)
     stdin: true
