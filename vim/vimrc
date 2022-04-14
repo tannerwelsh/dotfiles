@@ -32,6 +32,9 @@ elseif g:os == 'Linux'
   set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
 endif
 
+" Use rbprettier for Prettier command on Ruby files
+au FileType ruby let b:prettier_exec_cmd = "rbprettier"
+
 "------------------
 " Syntax and indent
 "------------------
