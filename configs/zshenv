@@ -13,14 +13,6 @@ if [[ ! "$PATH" == *"$DOTFILES_DIR/bin"* ]]; then
 fi
 
 
-# Additional tools for working with Twisp
-PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
-export PATH
-export JAVA_HOME="/opt/homebrew/Cellar/openjdk@11/11.0.14.1/libexec/openjdk.jdk/Contents/Home/"
-
-
 ##
 ## LANGUAGE ENV SETUP
 ##
