@@ -4,8 +4,10 @@
     - ~/.tmux/plugins
     - ~/.git_template/hooks
     - ~/.ctags.d
+    - ~/.shellrc
 
 - link:
+    ~/.bashrc: configs/bashrc
     ~/.ctags.d/.ctags: configs/ctags
     ~/.env: configs/env
     ~/.gemrc: configs/gemrc

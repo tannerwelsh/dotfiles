@@ -55,6 +55,11 @@ source "$DOTFILES_DIR/configs/zsh_aliases"
 source "$DOTFILES_DIR/configs/zsh_functions"
 
 ##
+## SHARED SHELL CONFIG
+##
+source "$HOME/.shellrc"
+
+##
 ## TOOLS
 ##
 
