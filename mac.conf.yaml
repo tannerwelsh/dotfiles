@@ -4,14 +4,9 @@
     ~/.config/alacritty/alacritty.yml:
       path: configs/alacritty-mac.yml
       create: true
-    ~/.ssh/config: configs/ssh
     ~/.gnupg/gpg-agent.conf:
       path: configs/gpg-agent.conf
       create: true
-    # Currently not using Karabiner
-    # ~/.config/karabiner/karabiner.json:
-    #   create: true
-    #   path: configs/karabiner.json
 
 - create:
     - ~/.gnupg
@@ -34,11 +29,10 @@
     - postgresql
     - python@3.8
     - rbenv
-    - redis
     - ripgrep
     - ruby
     - ruby-build
-    - sqlite
+    - secretive
     - tmux
     - tree
     - vim
@@ -50,7 +44,6 @@
     - alacritty
     - keycastr
     - caffeine
-    - postico
 
     # Tools
     - chromedriver

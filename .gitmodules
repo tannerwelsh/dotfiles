@@ -2,9 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "dotbot-brew"]
-	path = dotbot-brew
-	url = https://github.com/d12frosted/dotbot-brew.git
 [submodule "ohmyzsh"]
 	path = ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh
@@ -29,9 +26,6 @@
 [submodule "vim/pack/tpope/start/fugitive"]
 	path = vim/pack/tpope/start/fugitive
 	url = https://tpope.io/vim/fugitive.git
-[submodule "vim/pack/tpope/start/bundler"]
-	path = vim/pack/tpope/start/bundler
-	url = git://github.com/tpope/vim-bundler.git
 [submodule "vim/pack/tpope/start/rails"]
 	path = vim/pack/tpope/start/rails
 	url = https://github.com/tpope/vim-rails.git
@@ -80,3 +74,6 @@
 [submodule "vim/pack/tpope/start/abolish"]
 	path = vim/pack/tpope/start/abolish
 	url = https://github.com/tpope/vim-abolish
+[submodule "dotbot-brew"]
+	path = dotbot-brew
+	url = https://github.com/wren/dotbot-brew.git
