@@ -43,6 +43,10 @@ Some of the packages installed might need additional configuration to work prope
 
 After running `./install`, install useful keybindings and fuzzy completion for fzf. See instructions with `brew info fzf` (for Mac).
 
+### TMUX / TPM
+
+When first running tmux, the plugins managed by tpm are not installed. To install them, run `prefix + I` (prefix is configured to ctrl-a) from within a tmux session.
+
 ## Updating Dependencies
 
 All dependencies are included as Git submodules. To update them, run:
