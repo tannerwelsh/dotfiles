@@ -74,3 +74,6 @@
 [submodule "vim/pack/tpope/start/abolish"]
 	path = vim/pack/tpope/start/abolish
 	url = https://github.com/tpope/vim-abolish
+[submodule "dotbot-brew"]
+	path = dotbot-brew
+	url = https://github.com/wren/dotbot-brew.git
