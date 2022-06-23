@@ -26,9 +26,6 @@
 [submodule "vim/pack/tpope/start/fugitive"]
 	path = vim/pack/tpope/start/fugitive
 	url = https://tpope.io/vim/fugitive.git
-[submodule "vim/pack/tpope/start/bundler"]
-	path = vim/pack/tpope/start/bundler
-	url = git://github.com/tpope/vim-bundler.git
 [submodule "vim/pack/tpope/start/rails"]
 	path = vim/pack/tpope/start/rails
 	url = https://github.com/tpope/vim-rails.git
