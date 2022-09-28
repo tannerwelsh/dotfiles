@@ -77,3 +77,6 @@
 [submodule "dotbot-brew"]
 	path = dotbot-brew
 	url = https://github.com/wren/dotbot-brew.git
+[submodule "vim/pack/jparise/start/graphql"]
+	path = vim/pack/jparise/start/graphql
+	url = https://github.com/jparise/vim-graphql.git
