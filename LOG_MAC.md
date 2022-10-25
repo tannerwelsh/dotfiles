@@ -20,7 +20,7 @@ Follow instructions in https://docs.docker.com/docker-for-mac/install/
 
 ### Go Language
 
-https://golang.org/doc/install
+Installed with Brew
 
 ### RBenv Ctags
 

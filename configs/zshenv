@@ -27,11 +27,6 @@ fi
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=false
 
-# Go: add GOPATH to path (requires go)
-if type go &>/dev/null && [[ ! "$PATH" == *$(go env GOPATH)/bin* ]]; then
-  export PATH=$PATH:$(go env GOPATH)/bin
-fi
-
 function env_rust() {
   source "$HOME/.cargo/env"
 }
