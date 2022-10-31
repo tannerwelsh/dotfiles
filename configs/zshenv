@@ -27,6 +27,12 @@ fi
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=false
 
+# pnpm
+export PNPM_HOME="/Users/tanner/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+# Rust env
 function env_rust() {
   source "$HOME/.cargo/env"
 }
