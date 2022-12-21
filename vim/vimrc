@@ -95,13 +95,13 @@ runtime macros/matchit.vim " enables using % to jump between HTML tags
 set background=dark
 colorscheme nord
 " SOLARIZED
-set background=light
-colorscheme solarized8
+" set background=light
+" colorscheme solarized8
 
 " set lightline colorscheme
 " options: https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md
-" let g:lightline = { 'colorscheme': 'nord' }
-let g:lightline = { 'colorscheme': 'solarized' }
+let g:lightline = { 'colorscheme': 'nord' }
+" let g:lightline = { 'colorscheme': 'solarized' }
 
 "---------------------
 " Basic editing config

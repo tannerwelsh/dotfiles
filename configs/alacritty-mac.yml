@@ -403,7 +403,7 @@ schemes:
 ##
 
 # Choose a color scheme
-colors: *solarized_light
+colors: *nord
 
 # Bell
 #
