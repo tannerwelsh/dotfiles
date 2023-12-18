@@ -26,7 +26,6 @@
     ~/.tmux.conf: configs/tmux.conf
     ~/.tmux/plugins/tpm: tpm
     ~/.vim: vim
-    ~/.vuerc: configs/vuerc
     ~/.zshenv: configs/zshenv
     ~/.zshrc: configs/zshrc
     ~/.oh-my-zsh: ohmyzsh
