@@ -12,7 +12,10 @@ $(_user_host)${_current_dir} $(git_prompt_info) %(1j.[bg jobs: %j].)
 
 PROMPT2='%{%(!.%F{red}.%F{white})%}◀%{$reset_color%} '
 
-RPROMPT='$(vi_mode_prompt_info)%{$(echotc UP 1)%}$(_try_ruby_prompt) $(_try_nvm_prompt) $(git_prompt_status) ${_return_status}%{$(echotc DO 1)%}'
+RPROMPT='$(vi_mode_prompt_info)%{$(echotc UP 1)%} $(git_prompt_status) ${_return_status}%{$(echotc DO 1)%}'
+
+# With Ruby/Node version
+# RPROMPT='$(vi_mode_prompt_info)%{$(echotc UP 1)%}$(_try_ruby_prompt) $(_try_nvm_prompt) $(git_prompt_status) ${_return_status}%{$(echotc DO 1)%}'
 
 # True if in a Ruby project (where rbenv local returns the local version)
 function _try_ruby_prompt() {
@@ -55,9 +58,9 @@ ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§ "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[white]%}◒ "
 
 # Ruby prompt settings
-ZSH_THEME_RUBY_PROMPT_PREFIX="%{$fg[red]%}ruby "
-ZSH_THEME_RUBY_PROMPT_SUFFIX="%{$reset_color%}"
+# ZSH_THEME_RUBY_PROMPT_PREFIX="%{$fg[red]%}ruby "
+# ZSH_THEME_RUBY_PROMPT_SUFFIX="%{$reset_color%}"
 
 # NVM prompt settings
-ZSH_THEME_NVM_PROMPT_PREFIX="%{$fg[green]%}⬡ node "
-ZSH_THEME_NVM_PROMPT_SUFFIX="%{$reset_color%}"
+# ZSH_THEME_NVM_PROMPT_PREFIX="%{$fg[green]%}⬡ node "
+# ZSH_THEME_NVM_PROMPT_SUFFIX="%{$reset_color%}"
