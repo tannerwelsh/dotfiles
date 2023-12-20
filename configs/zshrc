@@ -65,7 +65,7 @@ source "$HOME/.shellrc"
 
 # 1Password CLI (macOS only)
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  source "~/.config/op/plugins.sh"
+  source "$HOME/.config/op/plugins.sh"
 fi
 
 # FZF: command line fuzzy finder https://github.com/junegunn/fzf
