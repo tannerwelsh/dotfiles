@@ -22,6 +22,7 @@
     - fd
     - fzf
     - gh
+    - git-lfs
     - go
     - gotop
     - gpg
