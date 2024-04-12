@@ -41,6 +41,7 @@
     - vim
     - xsv
     - yarn
+    - zoxide
 
 - cask:
     # Apps

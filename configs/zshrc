@@ -94,6 +94,10 @@ timezsh() {
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
 
+# Zoxide https://github.com/ajeetdsouza/zoxide
+# (smarter cd / autojump replacement)
+eval "$(zoxide init zsh)"
+
 # Direnv https://direnv.net
 eval "$(direnv hook zsh)"
 
