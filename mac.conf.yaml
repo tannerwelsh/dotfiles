@@ -1,8 +1,8 @@
 # Mac-specific install config
 
 - link:
-    ~/.config/alacritty/alacritty.yml:
-      path: configs/alacritty-mac.yml
+    ~/.config/alacritty/alacritty.toml:
+      path: configs/alacritty-mac.toml
       create: true
     ~/.gnupg/gpg-agent.conf:
       path: configs/gpg-agent.conf
