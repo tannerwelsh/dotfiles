@@ -26,6 +26,7 @@
     - go
     - gotop
     - gpg
+    - ngrok
     - pinentry-mac
     - postgresql
     - python@3.12
