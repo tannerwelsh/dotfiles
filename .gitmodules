@@ -77,3 +77,6 @@
 [submodule "vim/pack/jparise/start/graphql"]
 	path = vim/pack/jparise/start/graphql
 	url = https://github.com/jparise/vim-graphql.git
+[submodule "themes/alacritty-theme"]
+	path = themes/alacritty-theme
+	url = https://github.com/alacritty/alacritty-theme

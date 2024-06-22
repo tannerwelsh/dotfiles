@@ -8,6 +8,7 @@
 
 - link:
     ~/.bashrc: configs/bashrc
+    ~/.config/alacritty/themes: themes/alacritty-theme
     ~/.ctags.d/.ctags: configs/ctags
     ~/.env: configs/env
     ~/.gemrc: configs/gemrc
