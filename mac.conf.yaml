@@ -27,10 +27,9 @@
     - go
     - gotop
     - gpg
-    - heroku
     - pinentry-mac
     - postgresql
-    - python@3.8
+    - python@3.12
     - rbenv
     - ripgrep
     - ruby
