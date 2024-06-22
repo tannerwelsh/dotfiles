@@ -1,3 +1,2 @@
-vim.o.termguicolors = true
-
-require("remap")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

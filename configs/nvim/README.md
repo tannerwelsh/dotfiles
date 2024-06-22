@@ -1,10 +1,4 @@
-# NeoVim Configuration
+# 💤 LazyVim
 
-Initial inspiration from https://www.youtube.com/watch?v=w7i4amO_zaE
-
-- Fuzzy Finder: [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- Parser: [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-
-## Colorshemes
-
-- [Rose Pine](https://github.com/rose-pine/neovim)
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
