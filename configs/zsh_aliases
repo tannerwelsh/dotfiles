@@ -10,6 +10,9 @@ alias _alias="$EDITOR $0:A" # $0:A is ref to current script in ZSH
 # Go to ./dotfiles
 alias dotfiles="cd $DOTFILES_DIR"
 
+# Open ~/.dotfiles/HELP.md
+alias help="$EDITOR $DOTFILES_DIR/HELP.md"
+
 # Allow aliases to be with sudo
 alias sudo="sudo "
 
@@ -83,10 +86,10 @@ alias rename_with_spaces='while read file; do mv "$file" "${file//_/ }"; done'
 ## Editing
 ##
 
-alias editmodified='vim -p $(git diff --name-only --diff-filter=M HEAD | uniq)'
-alias editnew='vim -p $(git diff --name-only --diff-filter=A HEAD | uniq)'
-alias editunstaged='vim -p $(git diff --name-only --diff-filter=U | uniq)'
-alias editunmerged='vim -p $(git diff --name-only | uniq)'
+alias editmodified='$EDITOR -p $(git diff --name-only --diff-filter=M HEAD | uniq)'
+alias editnew='$EDITOR -p $(git diff --name-only --diff-filter=A HEAD | uniq)'
+alias editunstaged='$EDITOR -p $(git diff --name-only --diff-filter=U | uniq)'
+alias editunmerged='$EDITOR -p $(git diff --name-only | uniq)'
 
 alias ci="code-insiders ."
 
