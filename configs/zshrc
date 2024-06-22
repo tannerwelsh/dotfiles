@@ -13,7 +13,7 @@ export LC_ALL="en_US.UTF-8";
 export LESS_TERMCAP_md="${yellow}";
 
 # Use 256 colors
-export TERM=xterm-256color
+export TERM=screen-256color
 
 ##
 ## OS-SPECIFIC CONFIGS
