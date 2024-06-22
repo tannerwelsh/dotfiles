@@ -13,7 +13,6 @@
 
 # Homebrew casks and formulas (enabled with dotbot-brew plugin)
 - brew:
-    - autojump
     - bat
     - coreutils
     - git-delta
