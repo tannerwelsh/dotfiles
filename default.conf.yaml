@@ -28,6 +28,5 @@
     ~/.vim: vim
     ~/.zshenv: configs/zshenv
     ~/.zshrc: configs/zshrc
-    ~/.oh-my-zsh: ohmyzsh
     ~/.oh-my-zsh/custom/themes/tannerwelsh.zsh-theme: themes/tannerwelsh.zsh-theme
 

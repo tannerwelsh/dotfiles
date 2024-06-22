@@ -21,7 +21,6 @@ fi
 # eval "$(rbenv init -)" - not needed b/c provided by ohmyzsh rbenv plugin
 
 # Node / nvm
-# Handled by ohmyzsh zsh-nvm plugin
 # These configurations help with load time
 # # Thanks to https://blog.mattclemente.com/2020/06/26/oh-my-zsh-slow-to-load.html
 export NVM_LAZY_LOAD=true

@@ -23,8 +23,9 @@ For this, before installing make sure to use the appropriate branch for your pla
     $ git clone git@github.com:tannerwelsh/dotfiles.git
     ```
 
-2. Install dependencies: submodules like ohmyzsh, and dependent packages/systems:
+2. Install dependencies: submodules and dependent packages/systems:
   - ZSH
+  - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/)
   - [Homebrew](https://brew.sh/) \*and for [Linux](https://docs.brew.sh/Homebrew-on-Linux)
 
 3. Run install script for the given machine, e.g. to use `mac.conf.yaml`:
