@@ -1,4 +1,4 @@
-vim.g.mapleader = " "
+vim.g.mapleader = "'"
 
 local keymap = vim.keymap -- to enable direct access to keymap
 

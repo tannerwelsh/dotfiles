@@ -12,5 +12,10 @@ return {
     -- your configuration comes here
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
+    plugins = {
+      marks = {
+        enabled = false, -- disable b/c causes issues with remapped ' as <leader>
+      },
+    }
   },
 }
