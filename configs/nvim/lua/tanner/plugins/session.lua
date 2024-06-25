@@ -1,4 +1,5 @@
 -- Manage nvim sessions
+
 return {
   "rmagatti/auto-session",
   config = function()
