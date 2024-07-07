@@ -26,15 +26,15 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 -- Function to trim trailing whitespace
 local function trim_whitespace()
   local save = vim.fn.winsaveview()
-  vim.cmd('keeppatterns %s/\\s\\+$//e')
+  vim.cmd("keeppatterns %s/\\s\\+$//e")
   vim.fn.winrestview(save)
 end
 
 -- Create a command for the function
-vim.api.nvim_create_user_command('TrimWS', trim_whitespace, {})
+vim.api.nvim_create_user_command("TrimWS", trim_whitespace, {})
 
-keymap.set('n', '<Leader>tw', ':TrimWS<CR>', { desc = "Trim whitespace" })
-keymap.set('n', '<Leader>ww', ':TrimWS<CR> <bar> :w<CR>', { desc = "Trim whitespace + save" })
+keymap.set("n", "<leader>tw", ":TrimWS<CR>", { desc = "Trim whitespace" })
+keymap.set("n", "<leader>ww", ":TrimWS<CR> <bar> :w<CR>", { desc = "Trim whitespace + save" })
 
 -- MISC UTILS --
 

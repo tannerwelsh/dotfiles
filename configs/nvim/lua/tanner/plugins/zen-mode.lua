@@ -3,8 +3,8 @@
 
 return {
   "folke/zen-mode.nvim",
-  opts = { },
+  opts = {},
   config = function()
-    vim.keymap.set("n", "<leader>zz", "<cmd>ZenMode<CR>", { desc = "Toggle Zen mode" })
+    vim.keymap.set("n", "<leader>Z", "<cmd>ZenMode<CR>", { desc = "Toggle Zen mode" })
   end,
 }
