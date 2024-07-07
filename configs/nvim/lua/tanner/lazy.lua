@@ -15,13 +15,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Load local plugins
-require("lazy").setup("tanner.plugins", {
-  checker = {
-    enabled = true,
-    notify = false,
+require("lazy").setup(
+  {
+    { import = "tanner.plugins" },
+    { import = "tanner.plugins.lsp" }, -- load LSP plugins
   },
-  change_detection = {
-    notify = false, -- don't always notify when plugins change
-  },
-})
+  {
+    checker = {
+      enabled = true, -- used by status bar
+      notify = false,
+    },
+    change_detection = {
+      notify = false, -- don't always notify when plugins change
+    },
+  }
+)
 
