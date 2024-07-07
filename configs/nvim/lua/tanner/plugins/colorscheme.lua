@@ -6,10 +6,10 @@ return {
   config = function()
     require("tokyonight").setup({
       -- options: night, storm, moon, day
-      style = "day",
+      style = "night",
     })
 
     -- load the colorscheme here
     vim.cmd([[colorscheme tokyonight]])
-  end
+  end,
 }
