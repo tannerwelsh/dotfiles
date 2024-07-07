@@ -5,10 +5,10 @@ local keymap = vim.keymap -- to enable direct access to keymap
 -- WINDOW MGMT --
 
 -- move between panes
-keymap.set("n", "<C-j>", "<C-w>j") -- move down
-keymap.set("n", "<C-k>", "<C-w>k") -- move up
-keymap.set("n", "<C-h>", "<C-w>h") -- move left
-keymap.set("n", "<C-l>", "<C-w>l") -- move right
+keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to pane below" })
+keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to pane above" })
+keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to pane left" })
+keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to pane right" })
 
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
