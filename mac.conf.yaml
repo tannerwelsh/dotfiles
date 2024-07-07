@@ -26,6 +26,8 @@
     - go
     - gotop
     - gpg
+    - lua
+    - neovim
     - ngrok
     - pinentry-mac
     - postgresql

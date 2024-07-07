@@ -9,6 +9,7 @@
 - link:
     ~/.bashrc: configs/bashrc
     ~/.config/alacritty/themes: themes/alacritty-theme
+    ~/.config/nvim: configs/nvim
     ~/.ctags.d/.ctags: configs/ctags
     ~/.env: configs/env
     ~/.gemrc: configs/gemrc
