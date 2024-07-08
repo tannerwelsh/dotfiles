@@ -1,4 +1,4 @@
-- clean: ['~']
+- clean: ["~"]
 
 - create:
     - ~/.tmux/plugins
@@ -21,6 +21,7 @@
     ~/.git_template/hooks/post-rewrite: git_hooks/post-rewrite
     ~/.gitignore: configs/gitignore
     ~/.irbrc: configs/irbrc
+    ~/.profile: configs/profile
     ~/.pryrc: configs/pryrc
     ~/.railsrc: configs/railsrc
     ~/.rspec: configs/rspec
@@ -31,4 +32,3 @@
     ~/.zshenv: configs/zshenv
     ~/.zshrc: configs/zshrc
     ~/.oh-my-zsh/custom/themes/tannerwelsh.zsh-theme: themes/tannerwelsh.zsh-theme
-

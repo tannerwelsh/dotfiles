@@ -1,0 +1,6 @@
+##
+## USER PROFILE SETUP
+##
+
+# Rust env
+. "$HOME/.cargo/env"

@@ -29,9 +29,6 @@ export NVM_COMPLETION=false
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-# pnpm end
 
 # Rust env
-function env_rust() {
-  source "$HOME/.cargo/env"
-}
+. "$HOME/.cargo/env"

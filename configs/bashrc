@@ -5,3 +5,5 @@ source "$HOME/.shellrc"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# Source Rust env
+. "$HOME/.cargo/env"
