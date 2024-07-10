@@ -23,7 +23,6 @@ endif
 " Package/plugin mgmt
 "--------------------
 packloadall " load all packages in 'start' directory
-packadd! dracula
 
 " Add FZF to runtime path
 if g:os == 'Darwin'
@@ -91,17 +90,21 @@ runtime macros/matchit.vim " enables using % to jump between HTML tags
 "----------------
 " Colors & themes
 "----------------
+
+" CATPPUCCIN
+colorscheme catppuccin_mocha " can choose between latte, frappe, macchiato or mocha
+
 " NORD (DEFAULT)
-set background=dark
-colorscheme nord
+" set background=dark
+" colorscheme nord
+
 " SOLARIZED
 " set background=light
 " colorscheme solarized8
 
 " set lightline colorscheme
 " options: https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md
-let g:lightline = { 'colorscheme': 'nord' }
-" let g:lightline = { 'colorscheme': 'solarized' }
+let g:lightline = { 'colorscheme': 'catppuccin_mocha' } " options: nord | solarized | catppuccin_*
 
 "---------------------
 " Basic editing config

@@ -1,6 +1,15 @@
 import = [
-    "~/.config/alacritty/themes/themes/nord.toml"
-    # "~/.config/alacritty/themes/themes/nord_light.toml"
+  # NORD
+  # "~/.config/alacritty/themes/themes/nord.toml"
+  # "~/.config/alacritty/themes/themes/nord_light.toml"
+
+  # CATPPUCCIN
+  # uncomment the flavour you want below:
+  # "~/.config/alacritty/themes/themes/catppuccin.toml"
+  # "~/.config/alacritty/themes/themes/catppuccin_latte.toml"
+  # "~/.config/alacritty/themes/themes/catppuccin_frappe.toml"
+  # "~/.config/alacritty/themes/themes/catppuccin_macchiato.toml"
+  "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
 ]
 
 [font]
@@ -12,3 +21,6 @@ style = "Regular"
 
 [window]
 opacity = 1.0
+
+[env]
+TERM = "xterm-256color"
