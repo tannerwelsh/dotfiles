@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+# Function to replace patterns in filenames
+replace_in_filenames() {
+  # Ensure the replacement string is provided
+  if [[ -z "$1" ]]; then
+    echo "Usage: $0 'sed_replacement_string' <file_pattern>"
+    echo "Example: $0 's/ /-/g' *.md"
+    return 1
+  fi
+
+  # Get the sed replacement string
+  local sed_replacement=$1
+
+  # Shift arguments to get the file pattern
+  shift
+
+  # Iterate over each file that matches the pattern
+  for file in "$@"; do
+    # Replace the pattern in the filename using sed
+    new_file=$(echo "$file" | sed "$sed_replacement")
+
+    # Rename the file
+    mv "$file" "$new_file"
+  done
+}
+
+# Call the function with the provided arguments
+replace_in_filenames "$@"
