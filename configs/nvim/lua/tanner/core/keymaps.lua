@@ -21,21 +21,6 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
--- FORMATTING --
-
--- Function to trim trailing whitespace
-local function trim_whitespace()
-  local save = vim.fn.winsaveview()
-  vim.cmd("keeppatterns %s/\\s\\+$//e")
-  vim.fn.winrestview(save)
-end
-
--- Create a command for the function
-vim.api.nvim_create_user_command("TrimWS", trim_whitespace, {})
-
-keymap.set("n", "<leader>tw", ":TrimWS<CR>", { desc = "Trim whitespace" })
-keymap.set("n", "<leader>ww", ":TrimWS<CR> <bar> :w<CR>", { desc = "Trim whitespace + save" })
-
 -- MISC UTILS --
 
 -- clear search highlights
