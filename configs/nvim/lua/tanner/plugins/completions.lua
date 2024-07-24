@@ -44,9 +44,17 @@ return {
         ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
         ["<C-e>"] = cmp.mapping.abort(), -- close completion window
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
+        ["<C-a>"] = cmp.mapping.complete({ -- Manually trigger cody completions
+          config = {
+            sources = {
+              { name = "cody" },
+            },
+          },
+        }),
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
+        { name = "cody" }, -- Sourcegraph Cody
         { name = "nvim_lsp" }, -- LSP
         { name = "luasnip" }, -- snippets
         { name = "buffer" }, -- text within current buffer
@@ -57,9 +65,13 @@ return {
         format = lspkind.cmp_format({
           maxwidth = 50,
           ellipsis_char = "...",
+          with_text = true,
+          menu = {
+            nvim_lsp = "[lsp]",
+            cody = "[cody]",
+          },
         }),
       },
     })
   end,
 }
-
