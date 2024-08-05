@@ -39,6 +39,9 @@ if type brew &>/dev/null; then
   compinit
 fi
 
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
 ##
 ## OH-MY-ZSH CONFIG
 ##
@@ -105,6 +108,3 @@ eval "$(direnv hook zsh)"
 ## Finally, remove duplicates in $PATH
 ##
 export PATH=$(consolidate-path "$PATH")
-
-# bun completions
-[ -s "/Users/tanner/.bun/_bun" ] && source "/Users/tanner/.bun/_bun"
