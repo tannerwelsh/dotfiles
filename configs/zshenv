@@ -32,3 +32,11 @@ export PATH="$PNPM_HOME:$PATH"
 
 # Rust env
 . "$HOME/.cargo/env"
+
+##
+## IDE Settings
+##
+
+# Fix command repeating in VS Code terminal
+# thanks to https://www.reddit.com/r/vscode/comments/f01ip6/integrated_terminal_echoes_name_of_command_for/
+[[ "$TERM_PROGRAM" == "vscode" ]] && export DISABLE_AUTO_TITLE="true" 
