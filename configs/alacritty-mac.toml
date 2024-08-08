@@ -16,7 +16,8 @@ import = [
 size = 14.0
 
 [font.normal]
-family = "Mononoki Nerd Font Mono" # https://madmalik.github.io/mononoki/
+# family = "Mononoki Nerd Font Mono" # https://madmalik.github.io/mononoki/
+family = "RecMonoLinear Nerd Font Mono" # https://www.recursive.design/
 style = "Regular"
 
 [window]
