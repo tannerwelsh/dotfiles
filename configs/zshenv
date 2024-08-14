@@ -18,11 +18,11 @@ fi
 ##
 
 # Ruby / rbenv
-# eval "$(rbenv init -)" - not needed b/c provided by ohmyzsh rbenv plugin
+eval "$(rbenv init -)"
 
 # Node / nvm
 # These configurations help with load time
-# # Thanks to https://blog.mattclemente.com/2020/06/26/oh-my-zsh-slow-to-load.html
+# Thanks to https://blog.mattclemente.com/2020/06/26/oh-my-zsh-slow-to-load.html
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=false
 
@@ -39,4 +39,4 @@ export PATH="$PNPM_HOME:$PATH"
 
 # Fix command repeating in VS Code terminal
 # thanks to https://www.reddit.com/r/vscode/comments/f01ip6/integrated_terminal_echoes_name_of_command_for/
-[[ "$TERM_PROGRAM" == "vscode" ]] && export DISABLE_AUTO_TITLE="true" 
+[[ "$TERM_PROGRAM" == "vscode" ]] && export DISABLE_AUTO_TITLE="true"

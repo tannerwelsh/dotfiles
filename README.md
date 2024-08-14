@@ -25,7 +25,6 @@ For this, before installing make sure to use the appropriate branch for your pla
 
 2. Install dependencies: submodules and dependent packages/systems:
   - ZSH
-  - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/)
   - [Homebrew](https://brew.sh/) \*and for [Linux](https://docs.brew.sh/Homebrew-on-Linux)
 
 3. Run install script for the given machine, e.g. to use `mac.conf.yaml`:
@@ -58,7 +57,7 @@ $ ./update
 
 ## Helpful Commands
 
-You will find aliases for common commands in `configs/zsh_aliases`, although some may be added through [Oh My ZSH plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) as well.
+You will find aliases for common commands in `configs/zsh_aliases`.
 
 Some useful ones to be aware of:
 
@@ -81,11 +80,6 @@ The foundational framework for this project. Provides basic infrastructure for d
 
 Dotbot plugin allowing list of Homebrew packages to be defined in config files.
 [repo](https://github.com/d12frosted/dotbot-brew)
-
-### ohmyzsh
-
-Framework for managing zsh configuration.
-[repo](https://github.com/ohmyzsh/ohmyzsh)
 
 ### tpm
 
