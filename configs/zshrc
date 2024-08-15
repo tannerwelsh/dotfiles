@@ -4,6 +4,8 @@
 
 # Don't store commands starting with a space in history
 setopt HIST_IGNORE_SPACE
+# Do not write a duplicate event to the history file.
+setopt HIST_SAVE_NO_DUPS
 
 # Prefer US English and use UTF-8
 export LANG="en_US.UTF-8";
@@ -20,10 +22,10 @@ export TERM=screen-256color
 ##
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # For Pop!_OS / Ubuntu
-  source "$DOTFILES_DIR/configs/zsh_linux_config"
+  source "$DOTFILES_DIR/zsh/linux.zsh"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   # For macOS
-  source "$DOTFILES_DIR/configs/zsh_mac_config"
+  source "$DOTFILES_DIR/zsh/mac.zsh"
 fi
 
 ##
@@ -44,12 +46,12 @@ fi
 ##
 ## CUSTOM ZSH ALIASES
 ##
-source "$DOTFILES_DIR/configs/zsh_aliases"
+source "$DOTFILES_DIR/zsh/aliases.zsh"
 
 ##
 ## CUSTOM FUNCTIONS
 ##
-source "$DOTFILES_DIR/configs/zsh_functions"
+source "$DOTFILES_DIR/zsh/functions.zsh"
 
 ##
 ## SHARED SHELL CONFIG

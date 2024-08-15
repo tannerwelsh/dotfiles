@@ -90,8 +90,6 @@ alias editnew='$EDITOR -p $(git diff --name-only --diff-filter=A HEAD | uniq)'
 alias editunstaged='$EDITOR -p $(git diff --name-only --diff-filter=U | uniq)'
 alias editunmerged='$EDITOR -p $(git diff --name-only | uniq)'
 
-alias ci="code-insiders ."
-
 alias rmswp="rm **/.*.swp" # remove Vim's swp files
 
 

@@ -39,6 +39,13 @@ For this, before installing make sure to use the appropriate branch for your pla
 
 Some of the packages installed might need additional configuration to work properly. Known caveats:
 
+### ZSH
+
+
+#### Context
+
+Used to use oh-my-zsh for zsh configuration, but wanted to get a better feel for setting up zsh and avoid the bloat brought in by having so many packages. So switched to a self-rolled setup with help from https://thevaluable.dev/zsh-install-configure-mouseless/.
+
 ### FZF
 
 After running `./install`, install useful keybindings and fuzzy completion for fzf. See instructions with `brew info fzf` (for Mac).

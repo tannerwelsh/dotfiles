@@ -8,8 +8,6 @@ _A place to log notes on configuring Mac_
 
 ## Keyboard / Mouse Configurations
 
-[Karabiner-Elements](https://karabiner-elements.pqrs.org/) - advanced keyboard remapping and customization. See `configs/karabiner.json` for initial setup.
-
 Logitech Options - for managing and customizing Logitech keyboard & mouse.
 
 ## Non-standard Installs
