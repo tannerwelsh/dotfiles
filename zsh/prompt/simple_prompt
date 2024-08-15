@@ -116,7 +116,7 @@ simple_prompt() {
     GIT_PROMPT_STASHED="%B%F{red}$SYMBOL_GIT_STASHED%f%b "
     GIT_PROMPT_BEHIND="%B%F{red}%f%b "
     GIT_PROMPT_AHEAD="%B%F{green}%f%b "
-    GIT_PROMPT_NO_CHANGE="%B%F{white}$SYMBOL_GIT_NOCHANGE%f%b "
+    GIT_PROMPT_NO_CHANGE="%F{white}$SYMBOL_GIT_NOCHANGE%f "
 
     prompt_git_branch
     RPROMPT='$(prompt_git_info) $(git_prompt_status)%F{black}(%*)%f'
