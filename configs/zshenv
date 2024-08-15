@@ -1,21 +1,46 @@
-##
-## ENV SETTINGS
-##
-source ~/.env
+#!/usr/bin/env zsh
 
 ##
-## Path Management
-##
+# ZSH Environment Settings
+#
+# Export environment variables for the current shell session
+#
 
-# Add .dotfiles/bin scripts to path
+export DOTFILES_DIR="$HOME/.dotfiles" # Used internally
+
+##
+# LOCAL
+#
+source $HOME/.env # Bring in local environment variables
+
+##
+# EDITOR
+#
+export EDITOR='nvim'
+export VISUAL='code'
+
+##
+# LANGUAGE
+#
+export LANG="en_US.UTF-8"; # Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8";
+
+##
+# TERMINAL
+#
+export TERM=screen-256color # Use 256 colors
+
+##
+# CUSTOM BIN
+#
 if [[ ! "$PATH" == *"$DOTFILES_DIR/bin"* ]]; then
+  # Add .dotfiles/bin scripts to path
   export PATH=$DOTFILES_DIR/bin:$PATH
 fi
 
-
 ##
-## LANGUAGE ENV SETUP
-##
+# LANGUAGE ENV SETUP
+#
 
 # Ruby / rbenv
 eval "$(rbenv init -)"
@@ -34,8 +59,8 @@ export PATH="$PNPM_HOME:$PATH"
 . "$HOME/.cargo/env"
 
 ##
-## IDE Settings
-##
+# IDE SETTINGS
+#
 
 # Fix command repeating in VS Code terminal
 # thanks to https://www.reddit.com/r/vscode/comments/f01ip6/integrated_terminal_echoes_name_of_command_for/
