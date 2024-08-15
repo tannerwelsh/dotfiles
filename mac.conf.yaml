@@ -43,6 +43,7 @@
     - xsv
     - yarn
     - zoxide
+    - zsh-syntax-highlighting
 
 - cask:
     # Apps

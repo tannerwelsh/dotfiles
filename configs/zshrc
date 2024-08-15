@@ -35,11 +35,9 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # OS-SPECIFIC CONFIGS
 #
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  # For Pop!_OS / Ubuntu
-  source "$DOTFILES_DIR/zsh/linux.zsh"
+  source "$DOTFILES_DIR/zsh/linux.zsh" # For Pop!_OS / Ubuntu
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  # For macOS
-  source "$DOTFILES_DIR/zsh/mac.zsh"
+  source "$DOTFILES_DIR/zsh/mac.zsh" # For macOS
 fi
 
 ##
@@ -111,6 +109,8 @@ eval "$(zoxide init zsh)"
 
 # Direnv https://direnv.net
 eval "$(direnv hook zsh)"
+
+source "$DOTFILES_DIR/zsh/plugins/highlighter/syntax-highlighter.zsh"
 
 # ----
 # Finally, remove duplicates in $PATH
