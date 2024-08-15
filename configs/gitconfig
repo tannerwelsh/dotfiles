@@ -17,6 +17,7 @@
 	ca = commit --amend
 	cf = commit --fixup
 	co = checkout
+	cm = checkout main
 	cs = commit --squash
 	ctags = !.git/hooks/ctags
 	d = diff
