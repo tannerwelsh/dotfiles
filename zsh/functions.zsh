@@ -32,3 +32,8 @@ ret () { cat /tmp/capture.out }
 function pretty_csv {
   perl -pe 's/((?<=,)|(?<=^)),/ ,/g;' "$@" | column -t -s, | less  -F -S -X -K
 }
+
+# List all 256 colors in terminal
+colors256 () {
+  for i in {0..255}; do echo -e "\033[38;5;${i}mColor $i"; done
+}

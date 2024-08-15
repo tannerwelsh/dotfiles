@@ -58,6 +58,13 @@ source "$DOTFILES_DIR/zsh/aliases.zsh"
 source "$DOTFILES_DIR/zsh/functions.zsh"
 
 ##
+# PROMPT
+#
+fpath=("$DOTFILES_DIR/zsh/prompt/" $fpath)
+autoload -Uz simple_prompt; simple_prompt
+
+
+##
 # SHARED SHELL CONFIG
 #
 source "$HOME/.shellrc"
