@@ -45,17 +45,7 @@ fi
 ##
 # COMPLETION
 #
-
-# Homebrew Shell Completion https://docs.brew.sh/Shell-Completion
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-
-# bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+source "$DOTFILES_DIR/zsh/completions.zsh"
 
 ##
 # ALIASES
