@@ -1,25 +1,39 @@
-##
-## INTERACTIVE SHELL OPTIONS
-##
-
-# Don't store commands starting with a space in history
-setopt HIST_IGNORE_SPACE
-# Do not write a duplicate event to the history file.
-setopt HIST_SAVE_NO_DUPS
-
-# Prefer US English and use UTF-8
-export LANG="en_US.UTF-8";
-export LC_ALL="en_US.UTF-8";
-
-# Highlight section titles in manual pages
-export LESS_TERMCAP_md="${yellow}";
-
-# Use 256 colors
-export TERM=screen-256color
+#!/usr/bin/env zsh
 
 ##
-## OS-SPECIFIC CONFIGS
+# ZSH Configuration
+#
+# Much inspiration taken from https://thevaluable.dev/zsh-install-configure-mouseless/
+#
+
 ##
+# NAVIGATION
+#
+setopt AUTO_CD              # Go to folder path without using cd.
+
+setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
+setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
+setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
+
+setopt CORRECT              # Spelling correction
+setopt CDABLE_VARS          # Change directory to a path stored in a variable.
+
+##
+# HISTORY
+#
+setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
+setopt HIST_IGNORE_DUPS          # Do not record an event that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete an old recorded event if a new event is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a previously found event.
+setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
+setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
+
+##
+# OS-SPECIFIC CONFIGS
+#
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # For Pop!_OS / Ubuntu
   source "$DOTFILES_DIR/zsh/linux.zsh"
@@ -29,8 +43,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 ##
-## COMPLETION
-##
+# COMPLETION
+#
 
 # Homebrew Shell Completion https://docs.brew.sh/Shell-Completion
 if type brew &>/dev/null; then
@@ -44,23 +58,24 @@ fi
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 ##
-## CUSTOM ZSH ALIASES
-##
+# ALIASES
+#
 source "$DOTFILES_DIR/zsh/aliases.zsh"
 
 ##
-## CUSTOM FUNCTIONS
-##
+# FUNCTIONS
+#
 source "$DOTFILES_DIR/zsh/functions.zsh"
 
 ##
-## SHARED SHELL CONFIG
-##
+# SHARED SHELL CONFIG
+#
 source "$HOME/.shellrc"
 
+
 ##
-## TOOLS
-##
+# TOOLS
+#
 
 # 1Password CLI (macOS only)
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -100,7 +115,6 @@ eval "$(zoxide init zsh)"
 # Direnv https://direnv.net
 eval "$(direnv hook zsh)"
 
-##
-## Finally, remove duplicates in $PATH
-##
+# ----
+# Finally, remove duplicates in $PATH
 export PATH=$(consolidate-path "$PATH")
