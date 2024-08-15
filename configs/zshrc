@@ -69,39 +69,16 @@ source "$HOME/.shellrc"
 
 
 ##
-# TOOLS
+# TOOLS & PLUGINS
 #
+
+source "$DOTFILES_DIR/zsh/plugins/highlighter/syntax-highlighter.zsh"
+source "$DOTFILES_DIR/zsh/plugins/fzf.zsh"
 
 # 1Password CLI (macOS only)
 if [[ "$OSTYPE" == "darwin"* ]]; then
   source "$HOME/.config/op/plugins.sh"
 fi
-
-# FZF: command line fuzzy finder https://github.com/junegunn/fzf
-if [[ -f ~/.fzf.zsh ]]; then
-  source ~/.fzf.zsh
-
-  # Setting fd/fdfind as default source for fzf (w/o pipe)
-  if type fdfind &>/dev/null; then
-    export FZF_DEFAULT_COMMAND='fdfind --type f'
-  elif type fd &>/dev/null; then
-    export FZF_DEFAULT_COMMAND='fd --type f'
-  else
-    export FZF_DEFAULT_COMMAND='find . -type f'
-  fi
-
-  # If in git repo, CTRL-T searches git files
-  if git rev-parse --is-inside-work-tree &>/dev/null; then
-    export FZF_CTRL_T_COMMAND='git ls-files'
-  else
-    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-  fi
-fi
-
-timezsh() {
-  shell=${1-$SHELL}
-  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
-}
 
 # Zoxide https://github.com/ajeetdsouza/zoxide
 # (smarter cd / autojump replacement)
@@ -109,8 +86,6 @@ eval "$(zoxide init zsh)"
 
 # Direnv https://direnv.net
 eval "$(direnv hook zsh)"
-
-source "$DOTFILES_DIR/zsh/plugins/highlighter/syntax-highlighter.zsh"
 
 # ----
 # Finally, remove duplicates in $PATH

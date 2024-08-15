@@ -37,3 +37,8 @@ function pretty_csv {
 colors256 () {
   for i in {0..255}; do echo -e "\033[38;5;${i}mColor $i"; done
 }
+
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
