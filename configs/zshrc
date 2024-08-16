@@ -87,6 +87,34 @@ eval "$(zoxide init zsh)"
 # Direnv https://direnv.net
 eval "$(direnv hook zsh)"
 
+##
+# LANGUAGE ENV SETUP
+#
+
+# Ruby / rbenv
+eval "$(rbenv init -)"
+
+# Node / nvm
+# These configurations help with load time
+# Thanks to https://blog.mattclemente.com/2020/06/26/oh-my-zsh-slow-to-load.html
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=false
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+# Rust env
+. "$HOME/.cargo/env"
+
+##
+# IDE SETTINGS
+#
+
+# Fix command repeating in VS Code terminal
+# thanks to https://www.reddit.com/r/vscode/comments/f01ip6/integrated_terminal_echoes_name_of_command_for/
+[[ "$TERM_PROGRAM" == "vscode" ]] && export DISABLE_AUTO_TITLE="true"
+
 # ----
 # Finally, remove duplicates in $PATH
 export PATH=$(consolidate-path "$PATH")
