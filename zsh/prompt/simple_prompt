@@ -68,7 +68,6 @@ git_prompt_status() {
   fi
 }
 
-
 prompt_git_branch() {
     autoload -Uz vcs_info
     precmd_vcs_info() { vcs_info }
@@ -102,7 +101,7 @@ simple_prompt() {
     SYMBOL_GIT_STASHED="∗"
     SYMBOL_GIT_NOCHANGE="∅"
 
-    GIT_PROMPT_PREFIX=" %F{black}$SYMBOL_GIT_BRANCH%f "
+    GIT_PROMPT_PREFIX="%F{black}$SYMBOL_GIT_BRANCH%f"
     GIT_PROMPT_SUFFIX=""
     GIT_PROMPT_DIRTY=""
     GIT_PROMPT_CLEAN=""
@@ -118,9 +117,12 @@ simple_prompt() {
     GIT_PROMPT_AHEAD="%B%F{green}%f%b "
     GIT_PROMPT_NO_CHANGE="%F{white}$SYMBOL_GIT_NOCHANGE%f "
 
+    JOBS_COUNT="%(1j.[%j].)"
+
     prompt_git_branch
-    RPROMPT='$(prompt_git_info) $(git_prompt_status)%F{black}(%*)%f'
-    PROMPT=$'%F{black}%~ %B%F{white}$SYMBOL_PROMPT%f%b '
+    RPROMPT='%F{black}$JOBS_COUNT (%*)%f'
+    PROMPT=$'%F{black}%~ on $(prompt_git_info) $(git_prompt_status)
+%B%F{white}$SYMBOL_PROMPT%f%b '
 }
 
 simple_prompt
