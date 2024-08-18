@@ -61,8 +61,8 @@ zstyle ':completion:alias-expension:*' completer _expand_alias
 ##
 # COLORS
 #
+zstyle ':completion:*' list-colors "bg=black,fg=white" # Colors for files and directory
 zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
 zstyle ':completion:*:*:*:*:descriptions' format '%F{blue}-- %D %d --%f'
 zstyle ':completion:*:*:*:*:messages' format ' %F{purple} -- %d --%f'
 zstyle ':completion:*:*:*:*:warnings' format ' %F{red}-- no matches found --%f'
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} # Colors for files and directory
