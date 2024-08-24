@@ -144,6 +144,9 @@ alias bkdms="bundle exec rake db:migrate:status"
 alias yw="yarn workspace"
 alias ywi="yarn workspaces info"
 
+alias pn="pnpm"
+alias pi="pnpm install"
+alias pe="pnpm exec"
 
 ##
 ## Misc. Applications
