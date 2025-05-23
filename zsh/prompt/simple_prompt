@@ -117,11 +117,22 @@ prompt_set_colors() {
 
     if [[ "$theme" == "light" ]]; then
         # Light theme colors (better contrast on light backgrounds)
-        PROMPT_PATH_COLOR="240"      # dark gray for path
-        PROMPT_SYMBOL_COLOR="125"    # rose/magenta for lambda
-        PROMPT_BRANCH_COLOR="240"    # dark gray for git branch
-        PROMPT_TIME_COLOR="243"      # medium gray for time
-        PROMPT_CLEAN_COLOR="243"     # medium gray for clean status
+        PROMPT_PATH_COLOR="4"        # dark blue for path
+        PROMPT_SYMBOL_COLOR="5"      # dark magenta for lambda
+        PROMPT_BRANCH_COLOR="8"      # dark gray for git branch
+        PROMPT_TIME_COLOR="8"        # dark gray for time
+        PROMPT_CLEAN_COLOR="8"       # dark gray for clean status
+        
+        # Git status colors for light mode
+        GIT_COLOR_ADDED="2"          # dark green
+        GIT_COLOR_MODIFIED="3"       # dark yellow/brown
+        GIT_COLOR_DELETED="1"        # dark red
+        GIT_COLOR_RENAMED="4"        # dark blue
+        GIT_COLOR_UNMERGED="6"       # dark cyan
+        GIT_COLOR_UNTRACKED="6"      # dark cyan
+        GIT_COLOR_STASHED="1"        # dark red
+        GIT_COLOR_BEHIND="1"         # dark red
+        GIT_COLOR_AHEAD="2"          # dark green
     else
         # Dark theme colors (better contrast on dark backgrounds)
         PROMPT_PATH_COLOR="12"       # bright blue for path
@@ -129,11 +140,18 @@ prompt_set_colors() {
         PROMPT_BRANCH_COLOR="8"      # bright black/gray for git branch
         PROMPT_TIME_COLOR="8"        # bright black/gray for time
         PROMPT_CLEAN_COLOR="8"       # bright black/gray for clean status
+        
+        # Git status colors for dark mode
+        GIT_COLOR_ADDED="green"      # bright green
+        GIT_COLOR_MODIFIED="yellow"  # bright yellow
+        GIT_COLOR_DELETED="red"      # bright red
+        GIT_COLOR_RENAMED="blue"     # bright blue
+        GIT_COLOR_UNMERGED="cyan"    # bright cyan
+        GIT_COLOR_UNTRACKED="cyan"   # bright cyan
+        GIT_COLOR_STASHED="red"      # bright red
+        GIT_COLOR_BEHIND="red"       # bright red
+        GIT_COLOR_AHEAD="green"      # bright green
     fi
-}
-
-prompt_git_info() {
-    [ ! -z "$vcs_info_msg_0_" ] && echo "$GIT_PROMPT_PREFIX%F{12}$vcs_info_msg_0_%f$GIT_PROMPT_SUFFIX"
 }
 
 simple_prompt() {
@@ -160,15 +178,15 @@ simple_prompt() {
     GIT_PROMPT_DIRTY=""
     GIT_PROMPT_CLEAN=""
 
-    GIT_PROMPT_ADDED="%F{green}$SYMBOL_GIT_ADDED%f "
-    GIT_PROMPT_MODIFIED="%F{yellow}$SYMBOL_GIT_MODIFIED%f "
-    GIT_PROMPT_DELETED="%F{red}$SYMBOL_GIT_DELETED%f "
-    GIT_PROMPT_RENAMED="%F{blue}$SYMBOL_GIT_RENAMED%f "
-    GIT_PROMPT_UNMERGED="%F{cyan}$SYMBOL_GIT_UNMERGED%f "
-    GIT_PROMPT_UNTRACKED="%F{cyan}$SYMBOL_GIT_UNTRACKED%f "
-    GIT_PROMPT_STASHED="%B%F{red}$SYMBOL_GIT_STASHED%f%b "
-    GIT_PROMPT_BEHIND="%B%F{red}%f%b "
-    GIT_PROMPT_AHEAD="%B%F{green}%f%b "
+    GIT_PROMPT_ADDED="%F{${GIT_COLOR_ADDED}}$SYMBOL_GIT_ADDED%f "
+    GIT_PROMPT_MODIFIED="%F{${GIT_COLOR_MODIFIED}}$SYMBOL_GIT_MODIFIED%f "
+    GIT_PROMPT_DELETED="%F{${GIT_COLOR_DELETED}}$SYMBOL_GIT_DELETED%f "
+    GIT_PROMPT_RENAMED="%F{${GIT_COLOR_RENAMED}}$SYMBOL_GIT_RENAMED%f "
+    GIT_PROMPT_UNMERGED="%F{${GIT_COLOR_UNMERGED}}$SYMBOL_GIT_UNMERGED%f "
+    GIT_PROMPT_UNTRACKED="%F{${GIT_COLOR_UNTRACKED}}$SYMBOL_GIT_UNTRACKED%f "
+    GIT_PROMPT_STASHED="%B%F{${GIT_COLOR_STASHED}}$SYMBOL_GIT_STASHED%f%b "
+    GIT_PROMPT_BEHIND="%B%F{${GIT_COLOR_BEHIND}}%f%b "
+    GIT_PROMPT_AHEAD="%B%F{${GIT_COLOR_AHEAD}}%f%b "
     GIT_PROMPT_NO_CHANGE="%F{${PROMPT_CLEAN_COLOR}}$SYMBOL_GIT_NOCHANGE%f "
 
     JOBS_COUNT="%(1j.[%j].)"
