@@ -93,6 +93,7 @@ runtime macros/matchit.vim " enables using % to jump between HTML tags
 
 " Initialize color scheme state
 let g:is_dark_mode = 0
+let g:lightline = { 'colorscheme': 'rosepine_dawn' }
 
 " Function to toggle between light and dark color schemes
 function! ToggleColorScheme(...)
@@ -101,21 +102,23 @@ function! ToggleColorScheme(...)
 
   if action == 'light' || (action == 'toggle' && g:is_dark_mode)
     " Switch to light mode
-    execute 'colorscheme ' . 'rosepine_dawn'
     set background=light
+    colorscheme rosepine_dawn
     let g:lightline = { 'colorscheme': 'rosepine_dawn' }
     let g:is_dark_mode = 0
     let $THEME_MODE = "light"
     " echo "Switched to light mode"
   elseif action == 'dark' || (action == 'toggle' && !g:is_dark_mode)
     " Switch to dark mode
-    execute 'colorscheme ' . 'rosepine_moon'
     set background=dark
+    colorscheme rosepine_moon
     let g:lightline = { 'colorscheme': 'rosepine_moon' }
     let g:is_dark_mode = 1
     let $THEME_MODE = "dark"
     " echo "Switched to dark mode"
   endif
+
+  call lightline#enable() " reload lightline
 endfunction
 
 " Start with light mode
