@@ -84,3 +84,6 @@
 [submodule "vim/pack/catppuccin/start/vim"]
 	path = vim/pack/catppuccin/start/vim
 	url = https://github.com/catppuccin/vim
+[submodule "vim/pack/rose-pine/start/rose-pine"]
+	path = vim/pack/rose-pine/start/rose-pine
+	url = https://github.com/rose-pine/vim.git
