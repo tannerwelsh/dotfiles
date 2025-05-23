@@ -52,9 +52,6 @@
     - keycastr
     - caffeine
 
-    # Tools
-    - chromedriver
-
     # Quick look plugins
     - qlmarkdown
     - qlstephen # view various text files
