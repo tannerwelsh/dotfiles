@@ -2,7 +2,7 @@
 [user]
 	name = Tanner Welsh
 	email = tannerwelsh@gmail.com
-	signingkey = D041AD3EE3D2439F
+	signingkey = 520A6957E72F4909
 [credential]
 	helper = osxkeychain
 	helper = cache --timeout 30000
