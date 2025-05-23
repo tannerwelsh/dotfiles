@@ -75,11 +75,6 @@ source "$HOME/.shellrc"
 source "$DOTFILES_DIR/zsh/plugins/highlighter/syntax-highlighter.zsh"
 source "$DOTFILES_DIR/zsh/plugins/fzf.zsh"
 
-# 1Password CLI (macOS only)
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  source "$HOME/.config/op/plugins.sh"
-fi
-
 # Zoxide https://github.com/ajeetdsouza/zoxide
 # (smarter cd / autojump replacement)
 eval "$(zoxide init zsh)"

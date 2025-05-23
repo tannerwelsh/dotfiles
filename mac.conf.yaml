@@ -13,6 +13,7 @@
 
 # Homebrew casks and formulas (enabled with dotbot-brew plugin)
 - brew:
+    - 1password-cli
     - bat
     - coreutils
     - git-delta
