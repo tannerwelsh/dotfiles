@@ -77,7 +77,7 @@ prompt_git_branch() {
 }
 
 prompt_git_info() {
-    [ ! -z "$vcs_info_msg_0_" ] && echo "$GIT_PROMPT_PREFIX%F{black}$vcs_info_msg_0_%f$GIT_PROMPT_SUFFIX"
+    [ ! -z "$vcs_info_msg_0_" ] && echo "$GIT_PROMPT_PREFIX%F{${PROMPT_BRANCH_COLOR}}$vcs_info_msg_0_%f$GIT_PROMPT_SUFFIX"
 }
 
 prompt_precommand() {
@@ -85,9 +85,63 @@ prompt_precommand() {
     print -P ''
 }
 
+# Detect if we're in light or dark mode
+prompt_detect_theme() {
+    # Check if we're in a terminal that supports theme detection
+    local theme_mode="dark"  # default to dark
+
+    # Try to detect from various sources
+    if [[ -n "$COLORFGBG" ]]; then
+        # Some terminals set this variable (format: "fg;bg")
+        local bg_color="${COLORFGBG##*;}"
+        if [[ "$bg_color" =~ ^[0-7]$ ]]; then
+            theme_mode="dark"
+        elif [[ "$bg_color" =~ ^[8-15]$ ]]; then
+            theme_mode="light"
+        fi
+    fi
+
+    # Check for explicit theme environment variables
+    if [[ "$THEME_MODE" == "light" ]] || [[ "$VIM_THEME" == "light" ]]; then
+        theme_mode="light"
+    elif [[ "$THEME_MODE" == "dark" ]] || [[ "$VIM_THEME" == "dark" ]]; then
+        theme_mode="dark"
+    fi
+
+    echo "$theme_mode"
+}
+
+# Set colors based on theme
+prompt_set_colors() {
+    local theme=$(prompt_detect_theme)
+
+    if [[ "$theme" == "light" ]]; then
+        # Light theme colors (better contrast on light backgrounds)
+        PROMPT_PATH_COLOR="240"      # dark gray for path
+        PROMPT_SYMBOL_COLOR="125"    # rose/magenta for lambda
+        PROMPT_BRANCH_COLOR="240"    # dark gray for git branch
+        PROMPT_TIME_COLOR="243"      # medium gray for time
+        PROMPT_CLEAN_COLOR="243"     # medium gray for clean status
+    else
+        # Dark theme colors (better contrast on dark backgrounds)
+        PROMPT_PATH_COLOR="12"       # bright blue for path
+        PROMPT_SYMBOL_COLOR="13"     # bright magenta for lambda
+        PROMPT_BRANCH_COLOR="8"      # bright black/gray for git branch
+        PROMPT_TIME_COLOR="8"        # bright black/gray for time
+        PROMPT_CLEAN_COLOR="8"       # bright black/gray for clean status
+    fi
+}
+
+prompt_git_info() {
+    [ ! -z "$vcs_info_msg_0_" ] && echo "$GIT_PROMPT_PREFIX%F{12}$vcs_info_msg_0_%f$GIT_PROMPT_SUFFIX"
+}
+
 simple_prompt() {
     autoload -Uz add-zsh-hook
     add-zsh-hook precmd prompt_precommand
+
+    # Set colors based on theme
+    prompt_set_colors
 
     SYMBOL_PROMPT="λ"
 
@@ -101,7 +155,7 @@ simple_prompt() {
     SYMBOL_GIT_STASHED="∗"
     SYMBOL_GIT_NOCHANGE="∅"
 
-    GIT_PROMPT_PREFIX="%F{black}$SYMBOL_GIT_BRANCH%f"
+    GIT_PROMPT_PREFIX="%F{${PROMPT_BRANCH_COLOR}}$SYMBOL_GIT_BRANCH%f"
     GIT_PROMPT_SUFFIX=""
     GIT_PROMPT_DIRTY=""
     GIT_PROMPT_CLEAN=""
@@ -113,17 +167,16 @@ simple_prompt() {
     GIT_PROMPT_UNMERGED="%F{cyan}$SYMBOL_GIT_UNMERGED%f "
     GIT_PROMPT_UNTRACKED="%F{cyan}$SYMBOL_GIT_UNTRACKED%f "
     GIT_PROMPT_STASHED="%B%F{red}$SYMBOL_GIT_STASHED%f%b "
-    GIT_PROMPT_BEHIND="%B%F{red}%f%b "
-    GIT_PROMPT_AHEAD="%B%F{green}%f%b "
-    GIT_PROMPT_NO_CHANGE="%F{white}$SYMBOL_GIT_NOCHANGE%f "
+    GIT_PROMPT_BEHIND="%B%F{red}%f%b "
+    GIT_PROMPT_AHEAD="%B%F{green}%f%b "
+    GIT_PROMPT_NO_CHANGE="%F{${PROMPT_CLEAN_COLOR}}$SYMBOL_GIT_NOCHANGE%f "
 
     JOBS_COUNT="%(1j.[%j].)"
 
     prompt_git_branch
-    RPROMPT='%F{black}$JOBS_COUNT (%*)%f'
-    PROMPT=$'%F{black}%~ on $(prompt_git_info) $(git_prompt_status)
-%B%F{white}$SYMBOL_PROMPT%f%b '
+    RPROMPT='%F{${PROMPT_TIME_COLOR}}$JOBS_COUNT (%*)%f'
+    PROMPT=$'%F{${PROMPT_PATH_COLOR}}%~ on $(prompt_git_info) $(git_prompt_status)
+%B%F{${PROMPT_SYMBOL_COLOR}}$SYMBOL_PROMPT%f%b '
 }
 
 simple_prompt
-
