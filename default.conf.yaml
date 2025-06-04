@@ -8,6 +8,8 @@
 
 - link:
     ~/.bashrc: configs/bashrc
+    ~/.claude/commands: configs/claude/commands
+    ~/.claude/settings.json: configs/claude/settings.json
     ~/.config/alacritty/themes: themes/alacritty-theme
     ~/.config/nvim: configs/nvim
     ~/.ctags.d/.ctags: configs/ctags

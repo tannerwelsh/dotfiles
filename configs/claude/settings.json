@@ -1,0 +1,28 @@
+{
+  "enableAllProjectMcpServers": false,
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit(**/*.ts)",
+      "Edit(**/*.tsx)",
+      "Edit(**/*.js)",
+      "Edit(**/*.jsx)",
+      "Edit(**/*.rb)",
+      "Edit(**/*.json)",
+      "Edit(**/*.md)",
+      "Bash(ls:*)",
+      "Bash(rg:*)",
+      "Bash(npm run:*)",
+      "Bash(npm test:*)",
+      "Bash(bundle exec:*)",
+      "Bash(git:*)",
+      "WebFetch"
+    ],
+    "deny": [
+      "Edit(~/.ssh/**)",
+      "Read(~/.ssh/**)",
+      "Edit(**/.env)",
+      "Bash(rm -rf:*)"
+    ]
+  }
+}

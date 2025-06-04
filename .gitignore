@@ -6,3 +6,6 @@
 
 # don't include downloaded binary gotop
 /bin/gotop
+
+# ignore local claude settings
+.claude/settings.local.json
