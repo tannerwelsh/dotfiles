@@ -16,8 +16,8 @@ source $HOME/.env # Bring in local environment variables
 ##
 # EDITOR
 #
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='vim'
+export VISUAL='vim'
 
 ##
 # LANGUAGE
