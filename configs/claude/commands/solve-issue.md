@@ -15,7 +15,8 @@ Then proceed with:
 2. Analyzing the codebase to understand current implementation
 3. Identifying all files that need to be modified
 4. Planning the solution approach
-5. Implementing the solution with clean, maintainable code following:
+5. Creating a working branch: `gh issue develop {issue-number} --checkout`
+6. Implementing the solution with clean, maintainable code following:
    - Project conventions and style guidelines (TypeScript/JavaScript or Ruby)
    - Proper error handling and edge cases
    - Backward compatibility where applicable
@@ -25,14 +26,9 @@ Create all necessary code changes and provide:
 - Any considerations for reviewers
 - Test cases that should be added
 
-After implementing the solution, update the issue status:
-```bash
-# Add a comment to the issue
-gh issue comment $ARGUMENTS --body "Working on this issue. [Description of approach]"
-
-# Close the issue when complete (if you have permissions)
-gh issue close $ARGUMENTS --comment "Fixed in [commit/PR reference]"
-
-# Or link to a PR that will close the issue
-gh issue develop $ARGUMENTS --checkout
-```
+After implementing the solution, open a pull request with GitHub CLI: `gh pr create --title "{title}" --body "{body}" --assignee @me`
+- Title: Use conventional commit format
+- Description: Include full context, testing approach, and screenshots if applicable
+- Link the issue with "Fixes #{issue-number}" or "Resolves #{issue-number}"
+- Add appropriate labels
+- Include PR checklist
