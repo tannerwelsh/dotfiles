@@ -53,3 +53,17 @@ gems.tags
 .sass-cache
 _site
 .jekyll-metadata
+
+# AGNC specific ignores
+.agnc/tmp/
+.agnc/cache/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Editor specific
+.vscode/
+.idea/
+*.swp
+*.swo
