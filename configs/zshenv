@@ -37,3 +37,4 @@ if [[ ! "$PATH" == *"$DOTFILES_DIR/bin"* ]]; then
   # Add .dotfiles/bin scripts to path
   export PATH=$DOTFILES_DIR/bin:$PATH
 fi
+. "$HOME/.cargo/env"
