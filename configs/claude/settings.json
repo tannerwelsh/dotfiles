@@ -1,5 +1,4 @@
 {
-  "enableAllProjectMcpServers": false,
   "permissions": {
     "allow": [
       "Read",
@@ -24,5 +23,7 @@
       "Edit(**/.env)",
       "Bash(rm -rf:*)"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": false,
+  "editorMode": "vim"
 }
