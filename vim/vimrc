@@ -199,6 +199,13 @@ elseif g:os == 'Linux'
   nnoremap <Leader>p "+p
 endif
 
+" use F2 to toggle paste mode (no autoformatting rules applied)
+" --- Pasting ---
+set pastetoggle=<F2>
+" Nice toggle that also shows current state
+nnoremap <F2> :set invpaste paste?<CR>
+inoremap <F2> <C-o>:set invpaste paste?<CR>
+
 " RSpec.vim mappings
 map <Leader>st :call RunCurrentSpecFile()<CR>
 map <Leader>ss :call RunNearestSpec()<CR>
