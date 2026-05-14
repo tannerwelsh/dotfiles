@@ -55,7 +55,7 @@ zstyle ':completion:*' group-name '' # Required for completion to be in good gro
 #
 zstyle ':completion:*' complete true # Complete the alias when _expand_alias is used as a function
 zle -C alias-expension complete-word _generic
-bindkey '^E' alias-expension # Expand aliases with <CTRL>-E
+bindkey '^[e' alias-expension # Expand aliases with <ALT>-E
 zstyle ':completion:alias-expension:*' completer _expand_alias
 
 ##

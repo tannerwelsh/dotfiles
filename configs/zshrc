@@ -82,6 +82,10 @@ eval "$(zoxide init zsh)"
 # Direnv https://direnv.net
 eval "$(direnv hook zsh)"
 
+# Ensure standard line-editing keys are bound after all plugins load
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+
 ##
 # LANGUAGE ENV SETUP
 #
