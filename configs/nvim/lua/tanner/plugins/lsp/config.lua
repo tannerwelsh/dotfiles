@@ -10,12 +10,6 @@ return {
     { "folke/lazydev.nvim", ft = "lua" }, -- properly configures LuaLS for editing your Neovim config
   },
   config = function()
-    -- import lspconfig plugin
-    local lspconfig = require("lspconfig")
-
-    -- import mason_lspconfig plugin
-    local mason_lspconfig = require("mason-lspconfig")
-
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
@@ -82,30 +76,26 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    mason_lspconfig.setup_handlers({
-      -- default handler for installed servers
-      function(server_name)
-        lspconfig[server_name].setup({
-          capabilities = capabilities,
-        })
-      end,
-      ["lua_ls"] = function()
-        -- configure lua server (with special settings)
-        lspconfig["lua_ls"].setup({
-          capabilities = capabilities,
-          settings = {
-            Lua = {
-              -- make the language server recognize "vim" global
-              diagnostics = {
-                globals = { "vim" },
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
+    local server_configs = {
+      lua_ls = {
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
+            },
+            completion = {
+              callSnippet = "Replace",
             },
           },
-        })
-      end,
-    })
+        },
+      },
+    }
+
+    for _, server_name in ipairs({ "ts_ls", "html", "cssls", "tailwindcss", "lua_ls" }) do
+      local config = server_configs[server_name] or {}
+      config.capabilities = capabilities
+      vim.lsp.config(server_name, config)
+      vim.lsp.enable(server_name)
+    end
   end,
 }
