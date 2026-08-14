@@ -21,7 +21,7 @@ All platform usage is consolidated on `main`. Differences are resolved by instal
     $ git clone git@github.com:tannerwelsh/dotfiles.git
     ```
 
-2. Install dependencies: submodules and dependent packages/systems:
+2. Install dependencies: framework submodules, Vim plugins, and dependent packages/systems:
   - ZSH
   - [Homebrew](https://brew.sh/) \*and for [Linux](https://docs.brew.sh/Homebrew-on-Linux)
 
@@ -54,7 +54,7 @@ When first running tmux, the plugins managed by tpm are not installed. To instal
 
 ## Updating Dependencies
 
-All dependencies are included as Git submodules. To update them, run:
+Framework dependencies are included as Git submodules, and Vim plugins are installed from the pinned manifest. To update them, run:
 
 ```shell
 $ ./update

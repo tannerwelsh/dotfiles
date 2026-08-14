@@ -1,0 +1,25 @@
+# path<TAB>repository<TAB>commit
+vim/pack/plugins/start/lightline	https://github.com/itchyny/lightline.vim	e358557e1a9f9fc860416c8eb2e34c0404078155
+vim/pack/tpope/start/commentary	https://tpope.io/vim/commentary.git	64a654ef4a20db1727938338310209b6a63f60c9
+vim/pack/airblade/start/vim-gitgutter	https://github.com/airblade/vim-gitgutter.git	a5ae0a5a18e266f8a62b3e256208afcbb20fe5b5
+vim/pack/tpope/start/surround	https://tpope.io/vim/surround.git	3d188ed2113431cf8dac77be61b842acb64433d9
+vim/pack/tpope/start/repeat	https://tpope.io/vim/repeat.git	65846025c15494983dafe5e3b46c8f88ab2e9635
+vim/pack/tpope/start/fugitive	https://tpope.io/vim/fugitive.git	4a745ea72fa93bb15dd077109afbb3d1809383f2
+vim/pack/tpope/start/rails	https://github.com/tpope/vim-rails.git	b0a5c76f86ea214ade36ab0b811e730c3f0add67
+vim/pack/themes/opt/solarized8	https://github.com/lifepillar/vim-solarized8.git	c4fd8a45767dea23fe51816967cdb3c86436eaad
+vim/pack/plugins/start/vim-prettier	https://github.com/prettier/vim-prettier	7dbdbb12c50a9f4ba72390cce2846248e4368fd0
+vim/pack/themes/start/nord	https://github.com/arcticicestudio/nord-vim.git	f13f5dfbb784deddbc1d8195f34dfd9ec73e2295
+vim/pack/junegunn/start/fzf	https://github.com/junegunn/fzf.vim.git	3cb44a8ba588e1ada409af495bdc6a4d2d37d5da
+vim/pack/ap/start/vim-css-color	https://github.com/ap/vim-css-color	14fd934cdd9ca1ac0e53511094e612eb9bace373
+vim/pack/junegunn/start/goyo	https://github.com/junegunn/goyo.vim	fa0263d456dd43f5926484d1c4c7022dfcb21ba9
+vim/pack/kana/start/vim-textobj-user	https://github.com/kana/vim-textobj-user	41a675ddbeefd6a93664a4dc52f302fe3086a933
+vim/pack/sgur/start/vim-textobj-parameter	https://github.com/sgur/vim-textobj-parameter	201144f19a1a7081033b3cf2b088916dd0bcb98c
+vim/pack/tek/start/vim-textobj-ruby	https://github.com/tek/vim-textobj-ruby	e955714b2e8cd581a4945b5ac5428c4c18de1657
+vim/pack/kana/start/vim-textobj-indent	https://github.com/kana/vim-textobj-indent	deb76867c302f933c8f21753806cbf2d8461b548
+vim/pack/tommcdo/start/vim-fugitive-blame	https://github.com/tommcdo/vim-fugitive-blame-ext.git	0c9355deeb235f89f50e3e9f362469826efcfb6a
+vim/pack/preservim/start/tagbar	https://github.com/preservim/tagbar	8de7694c0aeda253073098bbc9fb890b2902ddb8
+vim/pack/thoughtbot/start/vim-spec	https://github.com/thoughtbot/vim-rspec	c0251b2e40eba5c9fb145adb8896424fa11972da
+vim/pack/tpope/start/abolish	https://github.com/tpope/vim-abolish	dcbfe065297d31823561ba787f51056c147aa682
+vim/pack/jparise/start/graphql	https://github.com/jparise/vim-graphql.git	16b462eac626681365dc0b249c248705a9111957
+vim/pack/catppuccin/start/vim	https://github.com/catppuccin/vim	060000804cf50315ac6dd986bc4d84fbc40cbc9c
+vim/pack/rose-pine/start/rose-pine	https://github.com/rose-pine/vim.git	63641d0c3f3a69d71a3e264e53f3463570c1f79a
