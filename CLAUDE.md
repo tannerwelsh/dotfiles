@@ -24,7 +24,7 @@ This is a dotfiles repository built around dotbot for managing environment confi
 ./install -c linux.conf.yaml    # Install Linux-specific configuration
 ./install --only link           # Only create symlinks
 
-# Update dependencies (git submodules)
+# Update framework submodules and pinned Vim plugins
 ./update
 ```
 
@@ -57,7 +57,7 @@ The repository uses dotbot as its core framework with the following structure:
    - Core settings: `configs/nvim/lua/tanner/core/`
    - Plugin configs: `configs/nvim/lua/tanner/plugins/`
 5. **Git Hooks**: Template hooks in `git_hooks/` for ctags generation
-6. **Submodules**: Dependencies managed as git submodules (dotbot, dotbot-brew, tpm)
+6. **Dependencies**: Framework dependencies use submodules (dotbot, dotbot-brew, tpm, and the Alacritty theme); Vim plugins are installed from `vim/plugins.lock` by `scripts/install-vim-plugins`
 
 ## Key Environment Variables
 

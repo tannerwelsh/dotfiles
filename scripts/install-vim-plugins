@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+MANIFEST="${BASEDIR}/vim/plugins.lock"
+if [[ ! -f "${MANIFEST}" ]]; then
+  echo "Vim plugin manifest not found: ${MANIFEST}" >&2
+  exit 1
+fi
+
+while IFS=$'\t' read -r path url revision; do
+  [[ -z "${path}" || "${path}" == \#* ]] && continue
+
+  destination="${BASEDIR}/${path}"
+  parent="$(dirname "${destination}")"
+  mkdir -p "${parent}"
+
+  if [[ -d "${destination}/.git" ]]; then
+    current="$(git -C "${destination}" rev-parse HEAD)"
+    if [[ "${current}" == "${revision}" ]]; then
+      continue
+    fi
+    git -C "${destination}" fetch --depth=1 origin "${revision}"
+    git -C "${destination}" checkout --detach "${revision}"
+  elif [[ -e "${destination}" ]]; then
+    echo "Cannot install ${path}: destination exists and is not a Git repository" >&2
+    exit 1
+  else
+    git clone --filter=blob:none --no-checkout --depth=1 "${url}" "${destination}"
+    git -C "${destination}" fetch --depth=1 origin "${revision}"
+    git -C "${destination}" checkout --detach "${revision}"
+  fi
+done < "${MANIFEST}"

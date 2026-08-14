@@ -5,82 +5,9 @@
 [submodule "tpm"]
 	path = tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "vim/pack/plugins/start/lightline"]
-	path = vim/pack/plugins/start/lightline
-	url = https://github.com/itchyny/lightline.vim
-[submodule "vim/pack/tpope/start/commentary"]
-	path = vim/pack/tpope/start/commentary
-	url = https://tpope.io/vim/commentary.git
-[submodule "vim/pack/airblade/start/vim-gitgutter"]
-	path = vim/pack/airblade/start/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-  branch = main
-[submodule "vim/pack/tpope/start/surround"]
-	path = vim/pack/tpope/start/surround
-	url = https://tpope.io/vim/surround.git
-[submodule "vim/pack/tpope/start/repeat"]
-	path = vim/pack/tpope/start/repeat
-	url = https://tpope.io/vim/repeat.git
-[submodule "vim/pack/tpope/start/fugitive"]
-	path = vim/pack/tpope/start/fugitive
-	url = https://tpope.io/vim/fugitive.git
-[submodule "vim/pack/tpope/start/rails"]
-	path = vim/pack/tpope/start/rails
-	url = https://github.com/tpope/vim-rails.git
-[submodule "vim/pack/themes/opt/solarized8"]
-	path = vim/pack/themes/opt/solarized8
-	url = https://github.com/lifepillar/vim-solarized8.git
-[submodule "vim/pack/plugins/start/vim-prettier"]
-	path = vim/pack/plugins/start/vim-prettier
-	url = https://github.com/prettier/vim-prettier
-[submodule "vim/pack/themes/start/nord"]
-	path = vim/pack/themes/start/nord
-	url = https://github.com/arcticicestudio/nord-vim.git
-[submodule "vim/pack/junegunn/start/fzf"]
-	path = vim/pack/junegunn/start/fzf
-	url = git@github.com:junegunn/fzf.vim.git
-[submodule "vim/pack/ap/start/vim-css-color"]
-	path = vim/pack/ap/start/vim-css-color
-	url = https://github.com/ap/vim-css-color
-[submodule "vim/pack/junegunn/start/goyo"]
-	path = vim/pack/junegunn/start/goyo
-	url = https://github.com/junegunn/goyo.vim
-[submodule "vim/pack/kana/start/vim-textobj-user"]
-	path = vim/pack/kana/start/vim-textobj-user
-	url = https://github.com/kana/vim-textobj-user
-[submodule "vim/pack/sgur/start/vim-textobj-parameter"]
-	path = vim/pack/sgur/start/vim-textobj-parameter
-	url = https://github.com/sgur/vim-textobj-parameter
-[submodule "vim/pack/tek/start/vim-textobj-ruby"]
-	path = vim/pack/tek/start/vim-textobj-ruby
-	url = https://github.com/tek/vim-textobj-ruby
-[submodule "vim/pack/kana/start/vim-textobj-indent"]
-	path = vim/pack/kana/start/vim-textobj-indent
-	url = https://github.com/kana/vim-textobj-indent
-[submodule "vim/pack/tommcdo/start/vim-fugitive-blame"]
-	path = vim/pack/tommcdo/start/vim-fugitive-blame
-	url = https://github.com/tommcdo/vim-fugitive-blame-ext.git
-[submodule "vim/pack/preservim/start/tagbar"]
-	path = vim/pack/preservim/start/tagbar
-	url = https://github.com/preservim/tagbar
-[submodule "vim/pack/thoughtbot/start/vim-spec"]
-	path = vim/pack/thoughtbot/start/vim-spec
-	url = https://github.com/thoughtbot/vim-rspec
-[submodule "vim/pack/tpope/start/abolish"]
-	path = vim/pack/tpope/start/abolish
-	url = https://github.com/tpope/vim-abolish
 [submodule "dotbot-brew"]
 	path = dotbot-brew
 	url = https://github.com/wren/dotbot-brew.git
-[submodule "vim/pack/jparise/start/graphql"]
-	path = vim/pack/jparise/start/graphql
-	url = https://github.com/jparise/vim-graphql.git
 [submodule "themes/alacritty-theme"]
 	path = themes/alacritty-theme
 	url = https://github.com/alacritty/alacritty-theme
-[submodule "vim/pack/catppuccin/start/vim"]
-	path = vim/pack/catppuccin/start/vim
-	url = https://github.com/catppuccin/vim
-[submodule "vim/pack/rose-pine/start/rose-pine"]
-	path = vim/pack/rose-pine/start/rose-pine
-	url = https://github.com/rose-pine/vim.git

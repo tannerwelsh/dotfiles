@@ -2,3 +2,4 @@
 
 # Update all submodules
 git submodule update --init --remote
+"$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/scripts/install-vim-plugins"
