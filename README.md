@@ -10,11 +10,9 @@ The main configuration lives in `default.conf.yaml`, and additional machine-spec
 
 Since this configuration is meant to support both Mac and Linux machines, there are some slight differences.
 
-Most of these can be resolved by installing the platform-specific config (e.g. `mac.conf.yaml`), but some (such as those which affect statically tracked files like `config/gitconfig`) must be handled by using a different branch.
+All platform usage is consolidated on `main`. Differences are resolved by installing the platform-specific config (`mac.conf.yaml` or `linux.conf.yaml`) rather than by switching branches — see [Installation](#installation) below.
 
-For this, before installing make sure to use the appropriate branch for your platform:
-
-- Mac: https://github.com/tannerwelsh/dotfiles/tree/main-mac
+**Known limitation**: `configs/gitconfig` is a single statically-linked file shared by both platforms (see `default.conf.yaml`), and it currently hardcodes some Mac-only settings (the `osxkeychain` credential helper and a `/opt/homebrew`-based `gh` credential helper path). Linux users will need to adjust `~/.gitconfig` (e.g. `git config --global credential.helper cache`) after install until this file is made platform-aware.
 
 ## Installation
 
