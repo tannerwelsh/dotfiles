@@ -10,6 +10,7 @@
     ~/.bashrc: configs/bashrc
     ~/.claude/commands: configs/claude/commands
     ~/.claude/settings.json: configs/claude/settings.json
+    ~/.config/ghostty: configs/ghostty
     ~/.config/nvim: configs/nvim
     ~/.ctags.d/.ctags: configs/ctags
     ~/.env: configs/env

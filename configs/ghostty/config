@@ -1,0 +1,9 @@
+# Ghostty configuration
+# https://ghostty.org/docs/config
+
+##
+# THEME
+
+# Use Rose Pine, following the system light/dark appearance
+# https://rosepinetheme.com/
+theme = light:Rose Pine Dawn,dark:Rose Pine Moon
