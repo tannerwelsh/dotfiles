@@ -1,9 +1,6 @@
 # Mac-specific install config
 
 - link:
-    ~/.config/alacritty/alacritty.toml:
-      path: configs/alacritty-mac.toml
-      create: true
     ~/.gnupg/gpg-agent.conf:
       path: configs/gpg-agent.conf
       create: true
@@ -48,7 +45,6 @@
 
 - cask:
     # Apps
-    - alacritty
     - keycastr
     - caffeine
 

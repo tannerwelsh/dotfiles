@@ -1,9 +1,6 @@
 # Linux-specific install config
 
 - link:
-    ~/.config/alacritty/alacritty.yml:
-      path: configs/alacritty-linux.yml
-      create: true
     ~/.xbindkeysrc: configs/xbindkeysrc
     ~/.xmodmap: configs/xmodmap
 

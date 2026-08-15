@@ -9,7 +9,7 @@ This is a dotfiles repository built around dotbot for managing environment confi
 - Shell environment (ZSH with custom configuration)
 - Neovim configuration (Lua-based with Lazy.nvim)
 - Vim configuration
-- Terminal emulators (Alacritty, tmux)
+- Terminal emulators (Ghostty, tmux)
 - Git configuration and hooks
 - Various development tools
 
