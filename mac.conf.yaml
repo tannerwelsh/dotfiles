@@ -48,6 +48,3 @@
 
     # Quick look plugins
     - qlmarkdown
-    - qlstephen # view various text files
-    - quicklook-csv
-    - quicklook-json
