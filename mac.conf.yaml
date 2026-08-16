@@ -45,6 +45,7 @@
     # Apps
     - keycastr
     - caffeine
+    - raycast
 
     # Quick look plugins
     - qlmarkdown
