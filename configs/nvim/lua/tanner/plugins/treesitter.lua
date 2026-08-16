@@ -2,16 +2,28 @@
 
 return {
   "nvim-treesitter/nvim-treesitter",
-  event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
   dependencies = {
     "windwp/nvim-ts-autotag", -- auto-closing functionality for tags
   },
   config = function()
-    local treesitter = require("nvim-treesitter.configs")
+    local ok, treesitter = pcall(require, "nvim-treesitter.configs")
+    if not ok then
+      vim.notify("nvim-treesitter not loaded yet", vim.log.levels.WARN)
+      return
+    end
 
     treesitter.setup({ -- enable syntax highlighting
-      highlight = { enable = true },
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+        disable = function(lang, buf)
+          if vim.fn.getfsize(buf) > 1024 * 1024 then
+            return true
+          end
+          return false
+        end,
+      },
       indent = { enable = true },
       autotag = { enable = true },
       ensure_installed = {
