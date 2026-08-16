@@ -38,8 +38,6 @@
     - tmux
     - tree
     - vim
-    - xsv
-    - yarn
     - zoxide
     - zsh-syntax-highlighting
 
