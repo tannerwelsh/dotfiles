@@ -8,6 +8,3 @@
 [submodule "dotbot-brew"]
 	path = dotbot-brew
 	url = https://github.com/wren/dotbot-brew.git
-[submodule "themes/alacritty-theme"]
-	path = themes/alacritty-theme
-	url = https://github.com/alacritty/alacritty-theme
