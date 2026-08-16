@@ -3,3 +3,6 @@
 
 # don't include downloaded binary gotop
 /bin/gotop
+
+# don't track vim packages
+/vim/pack/*
