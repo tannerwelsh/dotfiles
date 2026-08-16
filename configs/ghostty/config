@@ -1,5 +1,15 @@
 # Ghostty configuration
 # https://ghostty.org/docs/config
+#
+# Syntax is `key = value`; comments must be on their own line.
+# An empty value (`key =`) resets that option back to its default.
+#
+# Useful commands:
+#   ghostty +show-config --default --docs   # every option, documented
+#   ghostty +list-themes                    # available themes
+#   ghostty +list-fonts                     # available fonts
+#
+# Reload this file at runtime with ctrl+shift+, (Linux) / cmd+shift+, (macOS).
 
 ##
 # THEME
@@ -7,3 +17,56 @@
 # Use Rose Pine, following the system light/dark appearance
 # https://rosepinetheme.com/
 theme = light:Rose Pine Dawn,dark:Rose Pine Moon
+
+##
+# FONT
+
+# Uncomment to override the system monospace default.
+# https://www.recursive.design/
+# font-family = RecMonoLinear Nerd Font Mono
+font-size = 14
+
+##
+# WINDOW
+
+# Breathing room between the text and the window edge
+window-padding-x = 4
+window-padding-y = 4
+
+# Open new windows/tabs in the current window's working directory
+window-inherit-working-directory = true
+
+# Follow the theme's light/dark appearance for window chrome
+window-theme = auto
+
+# Uncomment for a transparent background (1 = opaque, 0 = transparent)
+# background-opacity = 0.95
+
+##
+# CURSOR
+
+cursor-style = block
+cursor-style-blink = false
+
+# Get the cursor out of the way while typing
+mouse-hide-while-typing = true
+
+##
+# SCROLLBACK & CLIPBOARD
+
+# Scrollback buffer per surface, in bytes (default is 10MB)
+scrollback-limit = 10000000
+
+# Drop trailing whitespace from copied text
+clipboard-trim-trailing-spaces = true
+
+# Follow URLs on hover + ctrl (Linux) / cmd (macOS)
+link-url = true
+
+##
+# KEYBINDINGS
+
+# Syntax is `keybind = trigger=action`.
+# See https://ghostty.org/docs/config/keybind for triggers and actions.
+# example:
+# keybind = ctrl+shift+r=reload_config
