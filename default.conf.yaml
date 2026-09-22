@@ -1,11 +1,13 @@
 - clean: ["~"]
 
 - create:
-    - ~/.tmux/plugins
-    - ~/.git_template/hooks
-    - ~/.ctags.d
-    - ~/.shellrc
+    - ~/.claude
+    - ~/.config
     - ~/.config/ghostty
+    - ~/.ctags.d
+    - ~/.git_template/hooks
+    - ~/.shellrc
+    - ~/.tmux/plugins
 
 - link:
     ~/.bashrc: configs/bashrc

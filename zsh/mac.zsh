@@ -8,6 +8,3 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # GPG (for signing git commits)
 export GPG_TTY=$(tty)
-
-# Set up Secretive to manage SSH
-export SSH_AUTH_SOCK=/Users/tanner/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh

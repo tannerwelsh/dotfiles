@@ -154,6 +154,3 @@ alias pe="pnpm exec"
 
 # Docker
 alias dockerclean='docker system prune -f & docker volume prune -f'
-
-# Claude
-alias claude="/Users/tanner/.claude/local/claude"
