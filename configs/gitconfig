@@ -2,7 +2,7 @@
 [user]
 	name = Tanner Welsh
 	email = tannerwelsh@gmail.com
-	signingkey = 520A6957E72F4909
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIuWUiWiEOslHn2HaN0xgAb5Zrw2X+BVJjIS6ZzJFjTv
 [credential]
 	helper = osxkeychain
 	helper = cache --timeout 30000
@@ -81,3 +81,7 @@
 	required = true
 [ghq]
   root = ~/Code
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
