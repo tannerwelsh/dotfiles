@@ -25,5 +25,7 @@
     ]
   },
   "enableAllProjectMcpServers": false,
-  "editorMode": "vim"
+  "theme": "auto",
+  "editorMode": "vim",
+  "model": "sonnet"
 }
