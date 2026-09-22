@@ -82,6 +82,9 @@ eval "$(zoxide init zsh)"
 # Direnv https://direnv.net
 eval "$(direnv hook zsh)"
 
+# Local bin (for claude CLI)
+export PATH="$HOME/.local/bin:$PATH"
+
 # Ensure standard line-editing keys are bound after all plugins load
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line

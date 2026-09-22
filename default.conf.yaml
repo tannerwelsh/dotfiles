@@ -9,7 +9,6 @@
 
 - link:
     ~/.bashrc: configs/bashrc
-    ~/.claude/commands: configs/claude/commands
     ~/.claude/settings.json: configs/claude/settings.json
     ~/.config/ghostty/config: configs/ghostty/config
     ~/.config/nvim: configs/nvim
